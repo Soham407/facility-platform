@@ -1,0 +1,17 @@
+.claude/
+.codex-temp/
+.playwright-mcp/
+refs/
+*.zip
+*.png
+*.log
+*.pdf
+*.docx
+*.resolved
+enterprise-canvas-main/.worktrees/
+facilitypro-mobile/.agents/
+facilitypro-mobile/.claude/
+facilitypro-mobile/.gemini/
+facilitypro-mobile/.mcp.json
+facilitypro-mobile/skills-lock.json
+supabase/.temp/

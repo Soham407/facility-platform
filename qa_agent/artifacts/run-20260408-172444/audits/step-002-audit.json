@@ -1,0 +1,6 @@
+{
+  "status": "warning",
+  "summary": "Auditor unavailable: Error: Input must be provided either through stdin or as a prompt argument when using --print",
+  "findings": [],
+  "raw_response": ""
+}

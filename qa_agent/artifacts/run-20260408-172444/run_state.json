@@ -1,0 +1,38 @@
+{
+  "stalled_steps": 1,
+  "last_screen_fingerprint": "{\"ids\": [\"com.facilitypro.mobile:id/action_bar_root\", \"android:id/content\", \"com.android.systemui:id/status_bar_launch_animation_container\", \"com.android.systemui:id/status_bar_container\", \"com.android.systemui:id/status_bar\", \"com.android.systemui:id/status_bar_contents\", \"com.android.systemui:id/status_bar_start_side_container\", \"com.android.systemui:id/status_bar_start_side_content\", \"com.android.systemui:id/status_bar_start_side_except_heads_up\", \"com.android.systemui:id/clock\", \"com.android.systemui:id/notification_icon_area\", \"com.android.systemui:id/notificationIcons\", \"com.android.systemui:id/status_bar_end_side_container\", \"com.android.systemui:id/status_bar_end_side_content\", \"com.android.systemui:id/system_icons\", \"com.android.systemui:id/statusIcons\", \"com.android.systemui:id/wifi_combo\", \"com.android.systemui:id/wifi_group\", \"com.android.systemui:id/wifi_signal\", \"com.android.systemui:id/mobile_combo\"], \"texts\": [\"Tools\", \"5:29\", \"5:29 PM\", \"Android Setup notification: Finish setting up your sdk_gphone64_x86_64\", \"Google Play Protect notification: Google Play Protect is turned on\", \"Wifi signal full.\", \"Phone two bars.\", \"Battery 100 percent.\"]}",
+  "steps": [
+    {
+      "index": 1,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "warning",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-08T11:59:01.964786+00:00"
+    },
+    {
+      "index": 2,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "warning",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-08T11:59:33.252886+00:00"
+    },
+    {
+      "index": 3,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "warning",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-08T12:00:17.563754+00:00"
+    }
+  ],
+  "findings_total": 0,
+  "failures_total": 0
+}

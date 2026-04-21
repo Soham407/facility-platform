@@ -1,0 +1,70 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                         GUARD USER TEST - QUICK ACTION                       ║
+║                              Copy & Paste Ready                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🎯 DO THIS NOW:
+
+1️⃣  OPEN TWO BROWSER TABS:
+   Tab A: https://supabase.com/dashboard/project/wwhbdgwfodumognpkgrf/sql/new
+   Tab B: Your web app (F12 → Console)
+
+2️⃣  IN TAB A - CHECK GUARD'S TOKEN:
+   Copy-paste this query:
+   ```sql
+   SELECT id, user_id, token, is_active, created_at 
+   FROM push_tokens 
+   ORDER BY created_at DESC 
+   LIMIT 20;
+   ```
+   ✅ Look for: token starting with "ExponentPushToken", is_active=true
+
+3️⃣  IN TAB A - GET GUARD'S USER ID:
+   Copy-paste this query:
+   ```sql
+   SELECT id, email, first_name, role 
+   FROM users 
+   WHERE role='guard' OR role='security_guard'
+   ORDER BY created_at DESC;
+   ```
+   📌 Copy the user's ID
+
+4️⃣  IN TAB B - GET AUTH TOKEN:
+   Paste in console:
+   ```javascript
+   localStorage.getItem('sb-auth-token')
+   ```
+   📌 Copy the full token
+
+5️⃣  OPEN TERMINAL - SEND NOTIFICATION:
+   ```bash
+   curl -X POST \
+     https://wwhbdgwfodumognpkgrf.supabase.co/functions/v1/send-notification \
+     -H "Authorization: Bearer [PASTE_TOKEN]" \
+     -H "Content-Type: application/json" \
+     -d '{"user_id":"[PASTE_USER_ID]","title":"Test","body":"Guard test","channel":"fcm"}'
+   ```
+   Replace [PASTE_TOKEN] and [PASTE_USER_ID] with values from above
+
+6️⃣  CHECK RESULTS:
+   Device: Look for notification in 5-10 seconds
+   Database (Tab A):
+   ```sql
+   SELECT * FROM notification_logs
+   WHERE created_at > NOW() - INTERVAL '5 minutes'
+   ORDER BY created_at DESC LIMIT 1;
+   ```
+   Should show: status='sent', error_message=null
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SUCCESS = All 5 checks pass:
+   ✓ Token exists (is_active=true)
+   ✓ Curl returns "status":"sent"
+   ✓ notification_logs entry created
+   ✓ Device receives notification
+   ✓ User can tap and open
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 FULL GUIDE: See REAL_USER_NOTIFICATION_TESTING.md for details & troubleshooting

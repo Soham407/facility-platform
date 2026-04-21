@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "accessibility": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "computedHash": "6462f04969f59f771150e6410e6a11fa397f2934be0b51e8650f495feed1e28d"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+    },
+    "maestro": {
+      "source": "xenitv1/claude-code-maestro",
+      "sourceType": "github",
+      "computedHash": "f86a7b1a3c840d7f9eb289387b875fee81c10f4acba37960e895e45bceae0520"
+    },
+    "maestro-e2e": {
+      "source": "raphaelbarbosaqwerty/maestro-dev-skills",
+      "sourceType": "github",
+      "computedHash": "7608fc573831ddb1666bfd4cf3814878dc21d697639e2638f6dce7ab0ddeb11f"
+    },
+    "maestro-mobile-testing": {
+      "source": "tovimx/maestro-mobile-testing-skill",
+      "sourceType": "github",
+      "computedHash": "bdbd865389287a513591c184ca7958256b42d694216ae55c8e94372843eda46b"
+    },
+    "seo": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "computedHash": "f1fed683b76913d26fbf1aa1e008e6932f7771701fc3a79925b042236aa4681a"
+    }
+  }
+}

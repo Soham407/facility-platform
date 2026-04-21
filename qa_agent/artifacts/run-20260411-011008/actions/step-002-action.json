@@ -1,0 +1,7 @@
+{
+  "action_type": "tap",
+  "target": "Home",
+  "reason": "Fallback buyer-requests \u2192 Home",
+  "text": "",
+  "metadata": {}
+}

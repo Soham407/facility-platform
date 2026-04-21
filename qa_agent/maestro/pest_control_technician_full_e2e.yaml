@@ -1,0 +1,99 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_pest_control_technician
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_pest_control_technician
+- extendedWaitUntil:
+    visible:
+      id: qa_service_tab_home
+    timeout: 30000
+
+- assertVisible: "Pest Control workspace"
+- assertVisible:
+    id: qa_service_tab_tasks
+- assertVisible:
+    id: qa_service_tab_materials
+- assertVisible:
+    id: qa_service_tab_proof
+
+- tapOn:
+    id: qa_service_tab_proof
+- assertVisible: "Safety, attendance, and service proof"
+- assertVisible: "Mandatory PPE checklist"
+- tapOn:
+    id: qa_service_ppe_mask
+- tapOn:
+    id: qa_service_ppe_gloves
+- tapOn:
+    id: qa_service_ppe_eye-protection
+- tapOn:
+    id: qa_service_ppe_apron
+
+- tapOn:
+    id: qa_service_tab_materials
+- assertVisible: "Chemical request queue"
+- scrollUntilVisible:
+    element:
+      id: qa_service_request_card_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_service_request_card_0
+- assertVisible: "Rodent bait sachets"
+- tapOn:
+    id: qa_service_material_task_0
+- tapOn:
+    id: qa_service_material_label
+- inputText: "Anti-cockroach spray"
+- hideKeyboard
+- tapOn:
+    id: qa_service_material_quantity
+- inputText: "3"
+- hideKeyboard
+- tapOn:
+    id: qa_service_material_unit
+- inputText: "bottles"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_service_material_note
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_service_material_note
+- inputText: "Pest mobile E2E chemical request."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_service_submit_material_request
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_service_submit_material_request
+- scrollUntilVisible:
+    element:
+      id: qa_service_request_card_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_service_request_card_0
+- assertVisible: "Anti-cockroach spray"
+- assertVisible: "Pest mobile E2E chemical request."
+
+- tapOn:
+    id: qa_service_tab_tasks
+- assertVisible: "Assigned jobs and field progression"
+- assertVisible:
+    id: qa_service_task_card_0
+
+- tapOn:
+    id: qa_service_tab_home
+- assertVisible: "Pest Control workspace"

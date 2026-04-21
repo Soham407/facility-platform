@@ -1,0 +1,142 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_society_manager
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_society_manager
+- extendedWaitUntil:
+    visible:
+      id: qa_oversight_tab_home
+    timeout: 30000
+
+- assertVisible: "Site Oversight Hub"
+- assertVisible:
+    id: qa_oversight_tab_alerts
+- assertVisible:
+    id: qa_oversight_tab_operations
+- assertVisible:
+    id: qa_oversight_tab_tickets
+
+- tapOn:
+    id: qa_oversight_tab_alerts
+- assertVisible: "Panic Log Feed"
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_alert_acknowledge_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_alert_acknowledge_0
+- assertVisible:
+    id: qa_oversight_alerts_message
+
+- tapOn:
+    id: qa_oversight_tab_operations
+- assertVisible: "Checklist, visitor, and attendance board"
+- tapOn:
+    id: qa_oversight_refresh_board
+- assertVisible:
+    id: qa_oversight_operations_message
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_guard_row_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_oversight_guard_title_0
+
+- tapOn:
+    id: qa_oversight_tab_tickets
+- assertVisible: "Behavior and material tickets"
+- tapOn:
+    id: qa_oversight_ticket_type_material_quantity
+- tapOn:
+    id: qa_oversight_ticket_severity_medium
+- tapOn:
+    id: qa_oversight_ticket_subject
+- inputText: "Lobby sanitiser refill"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_category
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_ticket_category
+- inputText: "Damaged seal"
+- hideKeyboard
+- tapOn:
+    id: qa_oversight_ticket_location
+- inputText: "North Gate"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_note
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_ticket_note
+- inputText: "Manager mobile E2E material-quality ticket."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_batch_number
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_ticket_batch_number
+- inputText: "BATCH-SAN-17"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_ordered_qty
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_ticket_ordered_qty
+- inputText: "24"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_received_qty
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_ticket_received_qty
+- inputText: "18"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_create_ticket
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_create_ticket
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_card_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_oversight_ticket_card_0
+- assertVisible:
+    id: qa_oversight_ticket_title_0
+- assertVisible: "Lobby sanitiser refill"
+- assertVisible: "Manager mobile E2E material-quality ticket."
+- assertVisible: "Batch: BATCH-SAN-17"
+- assertVisible: "Ordered: 24 | Received: 18 | Shortage: 6"
+- tapOn:
+    id: qa_oversight_ticket_acknowledge_0
+- assertVisible:
+    id: qa_oversight_tickets_message
+
+- tapOn:
+    id: qa_oversight_tab_home
+- assertVisible: "Site Oversight Hub"

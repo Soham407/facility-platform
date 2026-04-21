@@ -1,0 +1,21 @@
+{
+  "stalled_steps": 0,
+  "last_screen_fingerprint": "{\"ids\": [\"com.android.systemui:id/status_bar_launch_animation_container\", \"com.android.systemui:id/status_bar_container\", \"com.android.systemui:id/status_bar\", \"com.android.systemui:id/status_bar_contents\", \"com.android.systemui:id/status_bar_start_side_container\", \"com.android.systemui:id/status_bar_start_side_content\", \"com.android.systemui:id/status_bar_start_side_except_heads_up\", \"com.android.systemui:id/cutout_space_view\", \"com.android.systemui:id/status_bar_end_side_container\", \"com.facilitypro.mobile:id/action_bar_root\", \"android:id/content\", \"qa_login_phone_input\", \"android:id/parentPanel\", \"com.google.android.inputmethod.latin:id/0_resource_name_obfuscated\"], \"texts\": [\"Tools\", \"PHASE 1\", \"Mobile OTP Sign-In\", \"Sign in with your registered mobile number. FacilityPro will use this session to route you into the correct mobile workspace.\", \"India numbers can be entered as `9876543210` and we'll convert them to `+91` automatically.\", \"Guard preview: use `9999999999` and OTP `123456`.\", \"Supervisor preview: use `8888888888` and OTP `123456`.\", \"Manager preview: use `7777777777` and OTP `123456`.\", \"HRMS employee preview: use `6666666666` and OTP `123456`.\", \"Buyer preview: use `5555555555` and OTP `123456`.\", \"AC technician preview: use `2222222222` and OTP `123456`.\", \"Pest control preview: use `1111111111` and OTP `123456`.\", \"Delivery preview: use `2121212121` and OTP `123456`.\", \"Service boy preview: use `2323232323` and OTP `123456`.\", \"Supplier preview: use `4444444444` and OTP `123456`.\", \"Vendor preview: use `3333333333` and OTP `123456`.\", \"Mobile number\", \"+91 98765 43210\", \"Use the phone number already linked to your staff or vendor account.\", \"Voice typing disabled\"]}",
+  "steps": [
+    {
+      "index": 1,
+      "screen_id": "authentication-login",
+      "screen_label": "Login",
+      "audit_status": "warning",
+      "action_type": "input",
+      "action_target": "qa_login_phone_input",
+      "notes": "Entering the guard preview phone number to proceed with authentication.",
+      "started_at": "2026-04-11T03:47:25.678792+00:00"
+    }
+  ],
+  "findings_total": 5,
+  "failures_total": 0,
+  "last_failure_summary": "",
+  "last_fix_branch": "",
+  "last_fix_commit": ""
+}

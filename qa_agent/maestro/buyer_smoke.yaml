@@ -1,0 +1,35 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_buyer
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_buyer
+- extendedWaitUntil:
+    visible:
+      id: qa_buyer_tab_home
+    timeout: 30000
+- assertVisible:
+    id: qa_buyer_tab_requests
+- assertVisible:
+    id: qa_buyer_tab_invoices
+- assertVisible:
+    id: qa_buyer_tab_feedback
+- tapOn:
+    id: qa_buyer_tab_requests
+- assertVisible: "Requests"
+- tapOn:
+    id: qa_buyer_tab_invoices
+- assertVisible: "Invoices"
+- tapOn:
+    id: qa_buyer_tab_feedback
+- assertVisible: "Feedback"
+- tapOn:
+    id: qa_buyer_tab_home
+- assertVisible: "Refresh buyer feed"

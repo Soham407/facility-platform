@@ -1,0 +1,7 @@
+{
+  "action_type": "tap",
+  "target": "Continue",
+  "reason": "Fallback auth continuation",
+  "text": "",
+  "metadata": {}
+}

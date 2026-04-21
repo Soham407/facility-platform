@@ -1,0 +1,113 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_vendor
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_vendor
+- extendedWaitUntil:
+    visible:
+      id: qa_supplier_tab_home
+    timeout: 30000
+
+- assertVisible: "Vendor fulfillment desk"
+- assertVisible: "Refresh supplier feed"
+
+- tapOn:
+    id: qa_supplier_tab_indents
+- assertVisible: "Indent review and response"
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_indent_accept_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_indent_accept_0
+- assertVisible:
+    id: qa_supplier_indents_message
+
+- tapOn:
+    id: qa_supplier_tab_orders
+- assertVisible: "Purchase order acknowledgement and dispatch"
+- assertVisible:
+    id: qa_supplier_po_title_0
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_po_acknowledge_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_po_acknowledge_0
+- assertVisible:
+    id: qa_supplier_orders_message
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_po_vehicle_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_po_vehicle_0
+- inputText: "MH 14 CD 4455"
+- hideKeyboard
+- tapOn:
+    id: qa_supplier_po_dispatch_note_0
+- inputText: "Vendor dispatch prepared for evening gate handoff."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_po_dispatch_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_po_dispatch_0
+- assertVisible:
+    id: qa_supplier_orders_message
+
+- tapOn:
+    id: qa_supplier_tab_billing
+- assertVisible: "Billing submission and payout visibility"
+- tapOn:
+    id: qa_supplier_bill_select_0
+- tapOn:
+    id: qa_supplier_bill_number
+- inputText: "BILL-VENDOR-1001"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_bill_amount
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_bill_amount
+- inputText: "5600"
+- hideKeyboard
+- tapOn:
+    id: qa_supplier_bill_note
+- inputText: "Vendor mobile E2E billing handoff."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_submit_bill
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_submit_bill
+- assertVisible:
+    id: qa_supplier_billing_message
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_bill_title_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible: "BILL-VENDOR-1001"
+- assertVisible: "Vendor mobile E2E billing handoff."
+
+- tapOn:
+    id: qa_supplier_tab_home
+- assertVisible: "Vendor fulfillment desk"

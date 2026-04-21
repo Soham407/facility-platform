@@ -1,0 +1,42 @@
+{
+  "status": "warning",
+  "summary": "Buyer Home screen renders expected dashboard with correct navigation tabs and KPI tiles. One warning flagged around the 'Create service or material requests' entry point and outstanding invoice amount visibility relative to PRD out-of-scope constraints.",
+  "findings": [
+    {
+      "severity": "info",
+      "title": "Navigation tabs present and QA-tagged",
+      "details": "All four bottom-nav tabs (Home, Requests, Invoices, Feedback) are present with correct resource IDs: qa_buyer_tab_home, qa_buyer_tab_requests, qa_buyer_tab_invoices, qa_buyer_tab_feedback.",
+      "expected": "Bottom navigation bar with Home, Requests, Invoices, Feedback tabs each carrying a stable qa_ resource ID.",
+      "observed": "All four tabs visible with correct IDs. No anomalies."
+    },
+    {
+      "severity": "info",
+      "title": "KPI tiles rendering correctly",
+      "details": "TOTAL REQUESTS (3, 1 active), PENDING APPROVAL (1), COMPLETED (0) are all present. Fulfillment pulse shows '1 PENDING' with a timestamp of Apr 11 1:03 AM, consistent with an overnight QA run.",
+      "expected": "Dashboard KPI tiles reflecting live requisition/order state.",
+      "observed": "Values present and plausible for a test environment. Refresh button ('Refresh buyer feed') is accessible."
+    },
+    {
+      "severity": "warning",
+      "title": "OUTSTANDING \u20b97,250 shown \u2014 verify this is view-only",
+      "details": "PRD Section 10 explicitly puts 'company-level financial reporting and ledger management' out of scope for mobile. The OUTSTANDING tile showing \u20b97,250 is acceptable only if it is a read-only aggregate of the buyer's own invoices. If tapping this tile allows any financial write operation (payment initiation, ledger entry), that would be a scope violation.",
+      "expected": "Outstanding invoice balance is display-only; no write/payment action reachable from this tile on mobile.",
+      "observed": "\u20b97,250 displayed as a static KPI tile. Tap behavior not confirmed from static screen capture \u2014 needs runtime verification."
+    },
+    {
+      "severity": "warning",
+      "title": "Portal description mentions 'Create service or material requests' \u2014 confirm no PO generation path",
+      "details": "PRD Section 10 states 'Purchase Order generation \u2026 is out of scope for mobile.' The subtitle copy reads 'Create service or material requests, track open orders\u2026'. Requisition creation is in-scope, but the flow must not allow the buyer to generate a formal Purchase Order. Needs a follow-up test tapping through the Requests tab to confirm the create flow terminates at requisition/service-request submission, not PO issuance.",
+      "expected": "Create flow produces a service or material requisition only; PO generation is handled server-side/web-only.",
+      "observed": "Copy suggests create capability exists but screen capture alone cannot confirm PO generation is absent. Flag for active flow testing."
+    },
+    {
+      "severity": "info",
+      "title": "Sign out control present",
+      "details": "A 'Sign out' button is visible on the home screen, confirming session management is accessible without deep navigation.",
+      "expected": "Sign out accessible from the home screen.",
+      "observed": "Present and visible."
+    }
+  ],
+  "raw_response": "```json\n{\n  \"status\": \"warning\",\n  \"summary\": \"Buyer Home screen renders expected dashboard with correct navigation tabs and KPI tiles. One warning flagged around the 'Create service or material requests' entry point and outstanding invoice amount visibility relative to PRD out-of-scope constraints.\",\n  \"findings\": [\n    {\n      \"severity\": \"info\",\n      \"title\": \"Navigation tabs present and QA-tagged\",\n      \"details\": \"All four bottom-nav tabs (Home, Requests, Invoices, Feedback) are present with correct resource IDs: qa_buyer_tab_home, qa_buyer_tab_requests, qa_buyer_tab_invoices, qa_buyer_tab_feedback.\",\n      \"expected\": \"Bottom navigation bar with Home, Requests, Invoices, Feedback tabs each carrying a stable qa_ resource ID.\",\n      \"observed\": \"All four tabs visible with correct IDs. No anomalies.\"\n    },\n    {\n      \"severity\": \"info\",\n      \"title\": \"KPI tiles rendering correctly\",\n      \"details\": \"TOTAL REQUESTS (3, 1 active), PENDING APPROVAL (1), COMPLETED (0) are all present. Fulfillment pulse shows '1 PENDING' with a timestamp of Apr 11 1:03 AM, consistent with an overnight QA run.\",\n      \"expected\": \"Dashboard KPI tiles reflecting live requisition/order state.\",\n      \"observed\": \"Values present and plausible for a test environment. Refresh button ('Refresh buyer feed') is accessible.\"\n    },\n    {\n      \"severity\": \"warning\",\n      \"title\": \"OUTSTANDING \u20b97,250 shown \u2014 verify this is view-only\",\n      \"details\": \"PRD Section 10 explicitly puts 'company-level financial reporting and ledger management' out of scope for mobile. The OUTSTANDING tile showing \u20b97,250 is acceptable only if it is a read-only aggregate of the buyer's own invoices. If tapping this tile allows any financial write operation (payment initiation, ledger entry), that would be a scope violation.\",\n      \"expected\": \"Outstanding invoice balance is display-only; no write/payment action reachable from this tile on mobile.\",\n      \"observed\": \"\u20b97,250 displayed as a static KPI tile. Tap behavior not confirmed from static screen capture \u2014 needs runtime verification.\"\n    },\n    {\n      \"severity\": \"warning\",\n      \"title\": \"Portal description mentions 'Create service or material requests' \u2014 confirm no PO generation path\",\n      \"details\": \"PRD Section 10 states 'Purchase Order generation \u2026 is out of scope for mobile.' The subtitle copy reads 'Create service or material requests, track open orders\u2026'. Requisition creation is in-scope, but the flow must not allow the buyer to generate a formal Purchase Order. Needs a follow-up test tapping through the Requests tab to confirm the create flow terminates at requisition/service-request submission, not PO issuance.\",\n      \"expected\": \"Create flow produces a service or material requisition only; PO generation is handled server-side/web-only.\",\n      \"observed\": \"Copy suggests create capability exists but screen capture alone cannot confirm PO generation is absent. Flag for active flow testing.\"\n    },\n    {\n      \"severity\": \"info\",\n      \"title\": \"Sign out control present\",\n      \"details\": \"A 'Sign out' button is visible on the home screen, confirming session management is accessible without deep navigation.\",\n      \"expected\": \"Sign out accessible from the home screen.\",\n      \"observed\": \"Present and visible.\"\n    }\n  ]\n}\n```"
+}

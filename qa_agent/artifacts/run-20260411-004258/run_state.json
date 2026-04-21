@@ -1,0 +1,48 @@
+{
+  "stalled_steps": 0,
+  "last_screen_fingerprint": "{\"ids\": [\"android:id/content\", \"com.google.android.apps.nexuslauncher:id/launcher\", \"com.google.android.apps.nexuslauncher:id/drag_layer\", \"com.google.android.apps.nexuslauncher:id/scrim_view\", \"com.google.android.apps.nexuslauncher:id/workspace\", \"com.google.android.apps.nexuslauncher:id/search_container_workspace\", \"com.google.android.apps.nexuslauncher:id/bc_smartspace_view\", \"com.google.android.apps.nexuslauncher:id/smartspace_card_pager\", \"com.google.android.apps.nexuslauncher:id/base_template_card_with_date\", \"com.google.android.apps.nexuslauncher:id/text_group\", \"com.google.android.apps.nexuslauncher:id/date\", \"com.google.android.apps.nexuslauncher:id/accessibility_action_view\", \"com.google.android.apps.nexuslauncher:id/page_indicator\", \"com.google.android.apps.nexuslauncher:id/hotseat\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets_4dp\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_target_margin_start\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search\"], \"texts\": [\"At a glance\", \"Sat, Apr 11\", \"Play Store\", \"Play Store has 1 notification\", \"Gmail\", \"Photos\", \"YouTube\", \"Home\", \"Phone\", \"Messages\", \"Chrome\", \"Predicted app: Play Store\", \"Google\", \"Google search\", \"Google app\", \"Voice search\", \"Camera search\"]}",
+  "steps": [
+    {
+      "index": 1,
+      "screen_id": "authentication-onboarding",
+      "screen_label": "Authentication / Onboarding",
+      "audit_status": "skipped",
+      "action_type": "tap",
+      "action_target": "Done",
+      "notes": "Fallback: dismiss keyboard",
+      "started_at": "2026-04-10T19:13:36.996890+00:00"
+    },
+    {
+      "index": 2,
+      "screen_id": "authentication-onboarding",
+      "screen_label": "Authentication / Onboarding",
+      "audit_status": "skipped",
+      "action_type": "scroll_tap",
+      "action_target": "Send OTP",
+      "notes": "Fallback: scroll to Send OTP",
+      "started_at": "2026-04-10T19:14:07.398070+00:00"
+    },
+    {
+      "index": 3,
+      "screen_id": "service-workflow-apps",
+      "screen_label": "AC Technician",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T19:14:39.150420+00:00"
+    },
+    {
+      "index": 4,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T19:14:53.801601+00:00"
+    }
+  ],
+  "findings_total": 0,
+  "failures_total": 0
+}

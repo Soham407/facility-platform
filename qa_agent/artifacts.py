@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import asdict, is_dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -35,7 +35,7 @@ class ArtifactStore:
         event = {
             "event_type": event_type,
             "payload": self._normalize(payload),
-            "recorded_at": datetime.utcnow().isoformat() + "Z",
+            "recorded_at": datetime.now(timezone.utc).isoformat(),
         }
         with self.events_path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(event))

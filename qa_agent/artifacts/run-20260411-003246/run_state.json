@@ -1,0 +1,68 @@
+{
+  "stalled_steps": 0,
+  "last_screen_fingerprint": "{\"ids\": [\"com.android.systemui:id/status_bar_launch_animation_container\", \"com.android.systemui:id/status_bar_container\", \"com.android.systemui:id/status_bar\", \"com.android.systemui:id/status_bar_contents\", \"com.android.systemui:id/status_bar_start_side_container\", \"com.android.systemui:id/status_bar_start_side_content\", \"com.android.systemui:id/status_bar_start_side_except_heads_up\", \"com.android.systemui:id/cutout_space_view\", \"com.android.systemui:id/status_bar_end_side_container\", \"com.facilitypro.mobile:id/action_bar_root\", \"android:id/content\"], \"texts\": [\"Tools\", \"Guard preview: use `9999999999` and OTP `123456`.\", \"Supervisor preview: use `8888888888` and OTP `123456`.\", \"Manager preview: use `7777777777` and OTP `123456`.\", \"HRMS employee preview: use `6666666666` and OTP `123456`.\", \"Buyer preview: use `5555555555` and OTP `123456`.\", \"AC technician preview: use `2222222222` and OTP `123456`.\", \"Pest control preview: use `1111111111` and OTP `123456`.\", \"Delivery preview: use `2121212121` and OTP `123456`.\", \"Service boy preview: use `2323232323` and OTP `123456`.\", \"Supplier preview: use `4444444444` and OTP `123456`.\", \"Vendor preview: use `3333333333` and OTP `123456`.\", \"Mobile number\", \"9999999999\", \"Use the phone number already linked to your staff or vendor account.\", \"Preview buyer\", \"Preview AC technician\", \"Preview pest control\", \"Preview delivery\", \"Preview service boy\"]}",
+  "steps": [
+    {
+      "index": 1,
+      "screen_id": "authentication-onboarding",
+      "screen_label": "Authentication / Onboarding",
+      "audit_status": "skipped",
+      "action_type": "tap",
+      "action_target": "Done",
+      "notes": "Fallback: dismiss keyboard",
+      "started_at": "2026-04-10T19:03:20.511668+00:00"
+    },
+    {
+      "index": 2,
+      "screen_id": "authentication-onboarding",
+      "screen_label": "Authentication / Onboarding",
+      "audit_status": "skipped",
+      "action_type": "scroll_tap",
+      "action_target": "Send OTP",
+      "notes": "Fallback: scroll to Send OTP",
+      "started_at": "2026-04-10T19:03:48.692743+00:00"
+    },
+    {
+      "index": 3,
+      "screen_id": "service-workflow-apps",
+      "screen_label": "AC Technician",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T19:04:20.093717+00:00"
+    },
+    {
+      "index": 4,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T19:04:34.702446+00:00"
+    },
+    {
+      "index": 5,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T19:04:52.953093+00:00"
+    },
+    {
+      "index": 6,
+      "screen_id": "service-workflow-apps",
+      "screen_label": "AC Technician",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T19:05:09.965408+00:00"
+    }
+  ],
+  "findings_total": 0,
+  "failures_total": 0
+}

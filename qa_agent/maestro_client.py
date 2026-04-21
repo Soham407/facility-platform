@@ -252,7 +252,12 @@ class MaestroClient:
     def _tap_selector(self, target: str) -> str:
         # resource-ids look like  com.package:id/button_name  or  com.package:type/name
         # URLs (http://host:port/path) must NOT be treated as resource-ids.
-        if re.search(r":[a-z]+/", target):
+        if target.startswith("qa_"):
+            return f'    id: "{_escape_yaml_string(target)}"'
+        if re.search(r":[a-zA-Z]+/", target):
+            package_prefix = f"{self.config.app_id}:id/"
+            if target.startswith(package_prefix):
+                target = target[len(package_prefix):]
             return f'    id: "{_escape_yaml_string(target)}"'
         return f'    text: "{_escape_yaml_string(target)}"'
 

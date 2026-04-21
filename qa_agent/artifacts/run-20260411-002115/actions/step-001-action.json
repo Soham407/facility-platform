@@ -1,0 +1,7 @@
+{
+  "action_type": "tap",
+  "target": "Done",
+  "reason": "Fallback: dismiss keyboard",
+  "text": "",
+  "metadata": {}
+}

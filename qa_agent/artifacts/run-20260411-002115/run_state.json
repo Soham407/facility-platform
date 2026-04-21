@@ -1,0 +1,128 @@
+{
+  "stalled_steps": 2,
+  "last_screen_fingerprint": "{\"ids\": [\"android:id/content\", \"com.google.android.apps.nexuslauncher:id/launcher\", \"com.google.android.apps.nexuslauncher:id/drag_layer\", \"com.google.android.apps.nexuslauncher:id/scrim_view\", \"com.google.android.apps.nexuslauncher:id/workspace\", \"com.google.android.apps.nexuslauncher:id/search_container_workspace\", \"com.google.android.apps.nexuslauncher:id/bc_smartspace_view\", \"com.google.android.apps.nexuslauncher:id/smartspace_card_pager\", \"com.google.android.apps.nexuslauncher:id/base_template_card_with_date\", \"com.google.android.apps.nexuslauncher:id/text_group\", \"com.google.android.apps.nexuslauncher:id/date\", \"com.google.android.apps.nexuslauncher:id/accessibility_action_view\", \"com.google.android.apps.nexuslauncher:id/page_indicator\", \"com.google.android.apps.nexuslauncher:id/hotseat\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_targets_4dp\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_tap_target_margin_start\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search\", \"com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search\"], \"texts\": [\"At a glance\", \"Sat, Apr 11\", \"Play Store\", \"Play Store has 1 notification\", \"Gmail\", \"Photos\", \"YouTube\", \"Home\", \"Phone\", \"Messages\", \"Chrome\", \"Predicted app: Play Store\", \"Google\", \"Google search\", \"Google app\", \"Voice search\", \"Camera search\"]}",
+  "steps": [
+    {
+      "index": 1,
+      "screen_id": "authentication-onboarding",
+      "screen_label": "Authentication / Onboarding",
+      "audit_status": "skipped",
+      "action_type": "tap",
+      "action_target": "Done",
+      "notes": "Fallback: dismiss keyboard",
+      "started_at": "2026-04-10T18:51:48.101154+00:00"
+    },
+    {
+      "index": 2,
+      "screen_id": "authentication-onboarding",
+      "screen_label": "Authentication / Onboarding",
+      "audit_status": "skipped",
+      "action_type": "scroll",
+      "action_target": "",
+      "notes": "Fallback: scroll to reveal auth button",
+      "started_at": "2026-04-10T18:52:16.699009+00:00"
+    },
+    {
+      "index": 3,
+      "screen_id": "service-workflow-apps",
+      "screen_label": "AC Technician",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:52:43.892720+00:00"
+    },
+    {
+      "index": 4,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:52:58.583184+00:00"
+    },
+    {
+      "index": 5,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:53:13.036096+00:00"
+    },
+    {
+      "index": 6,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:53:27.511123+00:00"
+    },
+    {
+      "index": 7,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:53:41.932709+00:00"
+    },
+    {
+      "index": 8,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:53:56.209184+00:00"
+    },
+    {
+      "index": 9,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:54:10.669663+00:00"
+    },
+    {
+      "index": 10,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:54:25.426155+00:00"
+    },
+    {
+      "index": 11,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:54:39.946799+00:00"
+    },
+    {
+      "index": 12,
+      "screen_id": "overview",
+      "screen_label": "Unknown Screen",
+      "audit_status": "skipped",
+      "action_type": "back",
+      "action_target": "BACK",
+      "notes": "Fallback recovery action",
+      "started_at": "2026-04-10T18:54:54.582459+00:00"
+    }
+  ],
+  "findings_total": 0,
+  "failures_total": 0
+}

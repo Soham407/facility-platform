@@ -1,0 +1,95 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_ac_technician
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_ac_technician
+- extendedWaitUntil:
+    visible:
+      id: qa_service_tab_home
+    timeout: 30000
+
+- assertVisible: "AC Technician workspace"
+- assertVisible:
+    id: qa_service_tab_tasks
+- assertVisible:
+    id: qa_service_tab_materials
+- assertVisible:
+    id: qa_service_tab_proof
+
+- tapOn:
+    id: qa_service_tab_tasks
+- assertVisible: "Assigned jobs and field progression"
+- assertVisible:
+    id: qa_service_task_card_0
+- assertVisible: "AC not cooling - Wing B, Flat 304"
+
+- tapOn:
+    id: qa_service_tab_materials
+- assertVisible: "Parts and equipment supply"
+- scrollUntilVisible:
+    element:
+      id: qa_service_request_card_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_service_request_card_0
+- assertVisible: "Return air filter"
+- tapOn:
+    id: qa_service_mark_issued_0
+- assertVisible: "issued"
+- tapOn:
+    id: qa_service_material_task_0
+- tapOn:
+    id: qa_service_material_label
+- inputText: "Compressor capacitor"
+- hideKeyboard
+- tapOn:
+    id: qa_service_material_quantity
+- inputText: "2"
+- hideKeyboard
+- tapOn:
+    id: qa_service_material_unit
+- inputText: "pcs"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_service_material_note
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_service_material_note
+- inputText: "AC mobile E2E spare request."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_service_submit_material_request
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_service_submit_material_request
+- scrollUntilVisible:
+    element:
+      id: qa_service_request_card_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_service_request_card_0
+- assertVisible: "Compressor capacitor"
+
+- tapOn:
+    id: qa_service_tab_proof
+- assertVisible: "Attendance and proof capture"
+- assertVisible:
+    id: qa_service_proof_selected_title
+
+- tapOn:
+    id: qa_service_tab_home
+- assertVisible: "AC Technician workspace"

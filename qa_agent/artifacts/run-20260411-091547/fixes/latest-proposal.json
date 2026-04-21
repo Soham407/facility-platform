@@ -1,0 +1,6 @@
+{
+  "title": "Make login actions deterministic in night shift QA",
+  "branch_name": "fix/night-shift-login-actions",
+  "commit_message": "fix: use deterministic login actions for QA runs",
+  "raw_response": "{\"title\":\"Make login actions deterministic in night shift QA\",\"branch_name\":\"fix/night-shift-login-actions\",\"commit_message\":\"fix: use deterministic login actions for QA runs\"}"
+}

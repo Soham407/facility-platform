@@ -1,0 +1,282 @@
+appId: com.facilitypro.mobile
+---
+- launchApp:
+    stopApp: true
+
+- runFlow: _dismiss_developer_menu.yaml
+
+- runFlow:
+    when:
+      visible: "Development Build"
+    commands:
+      - tapOn: "http://10.0.2.2:8081"
+
+- runFlow: _dismiss_developer_menu.yaml
+
+- runFlow:
+    when:
+      visible:
+        id: qa_guard_tab_home
+    commands:
+      - tapOn:
+          id: qa_guard_tab_home
+      - scrollUntilVisible:
+          element:
+            id: qa_guard_sign_out
+          direction: DOWN
+          timeout: 15000
+          speed: 40
+          visibilityPercentage: 100
+      - tapOn:
+          id: qa_guard_sign_out
+
+- runFlow:
+    when:
+      visible:
+        id: qa_resident_tab_home
+    commands:
+      - tapOn:
+          id: qa_resident_tab_home
+      - scrollUntilVisible:
+          element:
+            id: qa_resident_sign_out
+          direction: DOWN
+          timeout: 15000
+          speed: 40
+          visibilityPercentage: 100
+      - tapOn:
+          id: qa_resident_sign_out
+
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 90000
+- runFlow: _dismiss_developer_menu.yaml
+- assertVisible: "Mobile OTP Sign-In"
+- scrollUntilVisible:
+    element:
+      id: qa_login_email_sign_in
+    direction: DOWN
+    timeout: 20000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_login_email_sign_in
+
+- extendedWaitUntil:
+    visible:
+      id: qa_email_login_email
+    timeout: 15000
+- assertVisible:
+    id: qa_email_login_email
+- tapOn:
+    id: qa_email_login_email
+- eraseText
+- inputText: "guard@test.com"
+- hideKeyboard
+- tapOn:
+    id: qa_email_login_password
+- eraseText
+- inputText: "Test@1234"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_email_login_submit
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_email_login_submit
+
+- runFlow: _dismiss_developer_menu.yaml
+
+- runFlow:
+    when:
+      visible:
+        id: qa_onboarding_biometric_skip
+    commands:
+      - tapOn:
+          id: qa_onboarding_biometric_skip
+
+- runFlow:
+    when:
+      visible:
+        id: qa_onboarding_biometric_continue
+    commands:
+      - tapOn:
+          id: qa_onboarding_biometric_continue
+
+- runFlow:
+    when:
+      visible:
+        id: qa_onboarding_geo_refresh
+    commands:
+      - tapOn:
+          id: qa_onboarding_geo_refresh
+      - extendedWaitUntil:
+          visible:
+            id: qa_onboarding_geo_complete
+          timeout: 20000
+      - tapOn:
+          id: qa_onboarding_geo_complete
+
+- extendedWaitUntil:
+    visible:
+      id: qa_guard_tab_home
+    timeout: 30000
+- assertVisible:
+    id: qa_guard_tab_home
+- tapOn:
+    id: qa_guard_tab_visitors
+- runFlow: _dismiss_developer_menu.yaml
+- assertVisible: "Visitor Logging"
+
+- tapOn:
+    id: qa_guard_visitor_name
+- inputText: "Staging Deny Visitor 01"
+- hideKeyboard
+- tapOn:
+    id: qa_guard_visitor_phone
+- inputText: "9876543210"
+- hideKeyboard
+- tapOn:
+    id: qa_guard_visitor_purpose
+- inputText: "Guest visit"
+- hideKeyboard
+- tapOn:
+    id: qa_guard_visitor_destination
+- inputText: "Rohit Verna"
+- hideKeyboard
+
+- extendedWaitUntil:
+    visible:
+      id: qa_guard_destination_result_0
+    timeout: 30000
+- tapOn:
+    id: qa_guard_destination_result_0
+
+- scrollUntilVisible:
+    element:
+      id: qa_guard_save_visitor
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_save_visitor
+
+- extendedWaitUntil:
+    visible:
+      id: qa_guard_visitors_message
+    timeout: 30000
+- assertVisible:
+    id: qa_guard_visitors_message
+
+- tapOn:
+    id: qa_guard_tab_home
+- scrollUntilVisible:
+    element:
+      id: qa_guard_sign_out
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_sign_out
+
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- runFlow: _dismiss_developer_menu.yaml
+- scrollUntilVisible:
+    element:
+      id: qa_login_email_sign_in
+    direction: DOWN
+    timeout: 20000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_login_email_sign_in
+
+- extendedWaitUntil:
+    visible:
+      id: qa_email_login_email
+    timeout: 15000
+- assertVisible:
+    id: qa_email_login_email
+- tapOn:
+    id: qa_email_login_email
+- eraseText
+- inputText: "rohit@test.com"
+- hideKeyboard
+- tapOn:
+    id: qa_email_login_password
+- eraseText
+- inputText: "Test@1234"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_email_login_submit
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_email_login_submit
+
+- runFlow: _dismiss_developer_menu.yaml
+
+- runFlow:
+    when:
+      visible:
+        id: qa_onboarding_biometric_skip
+    commands:
+      - tapOn:
+          id: qa_onboarding_biometric_skip
+
+- runFlow:
+    when:
+      visible:
+        id: qa_onboarding_biometric_continue
+    commands:
+      - tapOn:
+          id: qa_onboarding_biometric_continue
+
+- runFlow:
+    when:
+      visible:
+        id: qa_onboarding_geo_refresh
+    commands:
+      - tapOn:
+          id: qa_onboarding_geo_refresh
+      - extendedWaitUntil:
+          visible:
+            id: qa_onboarding_geo_complete
+          timeout: 20000
+      - tapOn:
+          id: qa_onboarding_geo_complete
+
+- extendedWaitUntil:
+    visible:
+      id: qa_resident_tab_home
+    timeout: 30000
+- assertVisible:
+    id: qa_resident_tab_home
+- tapOn:
+    id: qa_resident_tab_approvals
+- runFlow: _dismiss_developer_menu.yaml
+- assertVisible: "Resident visitor decisions"
+
+- extendedWaitUntil:
+    visible:
+      id: qa_resident_approval_card_0
+    timeout: 30000
+- assertVisible: "Staging Deny Visitor 01"
+- tapOn:
+    id: qa_resident_deny_visitor_0
+- extendedWaitUntil:
+    visible:
+      id: qa_resident_approvals_message
+    timeout: 30000
+- assertVisible:
+    id: qa_resident_approvals_message

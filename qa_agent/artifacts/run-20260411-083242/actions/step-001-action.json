@@ -1,0 +1,9 @@
+{
+  "action_type": "input",
+  "target": "qa_login_phone_input",
+  "reason": "Entering the Manager preview phone number to initiate the login flow as per the on-screen instructions.",
+  "text": "7777777777",
+  "metadata": {
+    "raw_response": "{\n  \"action_type\": \"input\",\n  \"target\": \"qa_login_phone_input\",\n  \"text\": \"7777777777\",\n  \"reason\": \"Entering the Manager preview phone number to initiate the login flow as per the on-screen instructions.\"\n}"
+  }
+}

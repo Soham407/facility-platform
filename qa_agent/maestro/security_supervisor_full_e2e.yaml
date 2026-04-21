@@ -1,0 +1,116 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_security_supervisor
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_security_supervisor
+- extendedWaitUntil:
+    visible:
+      id: qa_oversight_tab_home
+    timeout: 30000
+
+# Home
+- assertVisible: "Operations Control Room"
+- assertVisible:
+    id: qa_oversight_tab_alerts
+- assertVisible:
+    id: qa_oversight_tab_operations
+- assertVisible:
+    id: qa_oversight_tab_tickets
+
+# Alerts: acknowledge the first active alert
+- tapOn:
+    id: qa_oversight_tab_alerts
+- assertVisible: "Panic Log Feed"
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_alert_acknowledge_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_oversight_alert_card_0
+- tapOn:
+    id: qa_oversight_alert_acknowledge_0
+- assertVisible:
+    id: qa_oversight_alerts_message
+
+# Operations: refresh the board and verify a stable row exists
+- tapOn:
+    id: qa_oversight_tab_operations
+- assertVisible: "Checklist, visitor, and attendance board"
+- tapOn:
+    id: qa_oversight_refresh_board
+- assertVisible:
+    id: qa_oversight_operations_message
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_guard_row_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_oversight_guard_title_0
+
+# Tickets: create a new behavior ticket and move it to acknowledged
+- tapOn:
+    id: qa_oversight_tab_tickets
+- assertVisible: "Behavior and material tickets"
+- tapOn:
+    id: qa_oversight_ticket_type_behavior
+- tapOn:
+    id: qa_oversight_ticket_severity_high
+- tapOn:
+    id: qa_oversight_ticket_subject
+- inputText: "Ritu Nair"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_category
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_ticket_category
+- inputText: "Uniform non-compliance"
+- hideKeyboard
+- tapOn:
+    id: qa_oversight_ticket_location
+- inputText: "North Gate"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_note
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_ticket_note
+- inputText: "Supervisor mobile E2E behavior ticket."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_create_ticket
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_oversight_create_ticket
+- scrollUntilVisible:
+    element:
+      id: qa_oversight_ticket_card_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_oversight_ticket_card_0
+- assertVisible: "Ritu Nair"
+- assertVisible: "Supervisor mobile E2E behavior ticket."
+- tapOn:
+    id: qa_oversight_ticket_acknowledge_0
+
+# Return home
+- tapOn:
+    id: qa_oversight_tab_home
+- assertVisible: "Operations Control Room"

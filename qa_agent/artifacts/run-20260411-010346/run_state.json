@@ -1,0 +1,38 @@
+{
+  "stalled_steps": 0,
+  "last_screen_fingerprint": "{\"ids\": [\"com.android.systemui:id/status_bar_launch_animation_container\", \"com.android.systemui:id/status_bar_container\", \"com.android.systemui:id/status_bar\", \"com.android.systemui:id/status_bar_contents\", \"com.android.systemui:id/status_bar_start_side_container\", \"com.android.systemui:id/status_bar_start_side_content\", \"com.android.systemui:id/status_bar_start_side_except_heads_up\", \"com.android.systemui:id/cutout_space_view\", \"com.android.systemui:id/status_bar_end_side_container\", \"com.facilitypro.mobile:id/action_bar_root\", \"android:id/content\"], \"texts\": [\"Tools\", \"BUYER PORTAL\", \"Order and requisition desk for Preview\", \"Create service or material requests, track open orders, and keep invoice follow-up visible from one mobile workspace.\", \"Fulfillment pulse\", \"1 PENDING\", \"Last refresh: Apr 11, 1:03\\u202fAM\", \"Refresh buyer feed\", \"Sign out\", \"TOTAL REQUESTS\", \"3\", \"1 currently active\", \"PENDING APPROVAL\", \"1\", \"Waiting to move downstream\", \"COMPLETED\", \"0\", \"OUTSTANDING\", \"\\u20b97,250\", \"Home\"]}",
+  "steps": [
+    {
+      "index": 1,
+      "screen_id": "buyer-home",
+      "screen_label": "Buyer Home",
+      "audit_status": "skipped",
+      "action_type": "tap",
+      "action_target": "Requests",
+      "notes": "Fallback buyer-home \u2192 Requests",
+      "started_at": "2026-04-10T19:39:07.159764+00:00"
+    },
+    {
+      "index": 2,
+      "screen_id": "buyer-requests",
+      "screen_label": "Buyer Requests",
+      "audit_status": "skipped",
+      "action_type": "tap",
+      "action_target": "Home",
+      "notes": "Fallback buyer-requests \u2192 Home",
+      "started_at": "2026-04-10T19:39:35.799602+00:00"
+    },
+    {
+      "index": 3,
+      "screen_id": "buyer-home",
+      "screen_label": "Buyer Home",
+      "audit_status": "skipped",
+      "action_type": "tap",
+      "action_target": "Requests",
+      "notes": "Fallback buyer-home \u2192 Requests",
+      "started_at": "2026-04-10T19:40:04.057448+00:00"
+    }
+  ],
+  "findings_total": 0,
+  "failures_total": 0
+}

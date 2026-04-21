@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import socket
 import subprocess
+import sys
 from dataclasses import dataclass
 
 from .config import NightShiftConfig
@@ -39,7 +40,7 @@ def run_preflight() -> tuple[int, list[CheckResult]]:
     checks: list[CheckResult] = []
 
     for name, command in (
-        ("python", ["python", "--version"]),
+        ("python", [sys.executable, "--version"]),
         ("node", ["node", "--version"]),
         ("npm", ["npm", "--version"]),
         ("maestro", [config.maestro_command, "--version"]),

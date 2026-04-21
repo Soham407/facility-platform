@@ -1,0 +1,103 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_buyer
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_buyer
+- extendedWaitUntil:
+    visible:
+      id: qa_buyer_tab_home
+    timeout: 30000
+
+# Home and out-of-scope guard
+- assertVisible: "Buyer Portal"
+- assertVisible: "Refresh buyer feed"
+- assertNotVisible: "Generate PO"
+
+# Requests: create a new buyer request and verify it appears in the pipeline
+- tapOn:
+    id: qa_buyer_tab_requests
+- assertVisible: "Create and track buyer requests"
+- tapOn:
+    id: qa_buyer_request_title
+- inputText: "Night shift pantry restock"
+- hideKeyboard
+- tapOn:
+    id: qa_buyer_request_category_consumables
+- tapOn:
+    id: qa_buyer_request_priority_high
+- scrollUntilVisible:
+    element:
+      id: qa_buyer_request_item
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_buyer_request_item
+- inputText: "Tea sachets"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_buyer_create_request
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_buyer_create_request
+- scrollUntilVisible:
+    element:
+      id: qa_buyer_request_title_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_buyer_request_title_0
+- assertVisible: "Night shift pantry restock"
+- assertVisible: "PENDING"
+
+# Invoices: acknowledge the seeded invoice that starts in sent state
+- tapOn:
+    id: qa_buyer_tab_invoices
+- assertVisible: "Invoice acknowledgement and dispute desk"
+- scrollUntilVisible:
+    element:
+      id: qa_buyer_invoice_acknowledge_buyer-invoice-1
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_buyer_invoice_acknowledge_buyer-invoice-1
+- assertVisible:
+    id: qa_buyer_invoices_message
+
+# Feedback: submit feedback for the seeded feedback_pending request
+- tapOn:
+    id: qa_buyer_tab_feedback
+- assertVisible: "Delivery feedback and closure"
+- tapOn:
+    id: qa_buyer_feedback_request_buyer-request-2
+- tapOn:
+    id: qa_buyer_feedback_rating_5
+- tapOn:
+    id: qa_buyer_feedback_note
+- inputText: "Delivery quality confirmed from buyer mobile E2E."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_buyer_submit_feedback
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_buyer_submit_feedback
+- assertVisible:
+    id: qa_buyer_feedback_message
+- assertVisible: "Delivery quality confirmed from buyer mobile E2E."
+
+# Return home and confirm no PO generation surface is exposed
+- tapOn:
+    id: qa_buyer_tab_home
+- assertVisible: "Refresh buyer feed"
+- assertNotVisible: "Generate PO"

@@ -1,0 +1,42 @@
+{
+  "status": "warning",
+  "summary": "Login screen is functional with correct OTP flow and role routing, but exposes debug preview credentials and a phase label directly in the production UI \u2014 a security and polish concern.",
+  "findings": [
+    {
+      "severity": "warning",
+      "title": "Preview credentials exposed in production UI",
+      "details": "The login screen renders a full list of role-specific test credentials (phone numbers + OTP '123456') as visible on-screen text. This is a developer/QA convenience that must be gated behind a debug build flag before any production release.",
+      "expected": "No hardcoded credentials or OTP hints visible to end users in a production or staging build.",
+      "observed": "10 role credentials (Guard 9999999999, Supervisor 8888888888, Manager 7777777777, HRMS 6666666666, Buyer 5555555555, AC tech 2222222222, Pest 1111111111, Delivery 2121212121, Service boy 2323232323, Supplier 4444444444, Vendor 3333333333) with shared OTP '123456' rendered in plain text on the screen."
+    },
+    {
+      "severity": "warning",
+      "title": "'PHASE 1' implementation label visible in UI",
+      "details": "The string 'PHASE 1' is rendered as visible UI text on the login screen. Internal project phase labels are engineering/product artefacts and should not surface to end users.",
+      "expected": "No internal phase or sprint markers present in any user-facing view.",
+      "observed": "Text 'PHASE 1' visible as a screen element."
+    },
+    {
+      "severity": "info",
+      "title": "Phone input pre-filled with Supervisor preview number",
+      "details": "The input field shows '+91 98765 43210' (i.e., 9876543210, the Supervisor preview number) already populated. Unclear whether this is a leftover value from a prior automated test step or a default. Should be blank on fresh navigation to the login screen.",
+      "expected": "Phone input field empty on initial screen load.",
+      "observed": "Field contains '+91 98765 43210'."
+    },
+    {
+      "severity": "pass",
+      "title": "India number normalisation helper text present",
+      "details": "The screen correctly instructs users that 10-digit India numbers will be auto-prefixed with +91, matching expected localisation behaviour.",
+      "expected": "User guidance for India number format available.",
+      "observed": "Instruction text present: 'India numbers can be entered as `9876543210` and we\u2019ll convert them to `+91` automatically.'"
+    },
+    {
+      "severity": "pass",
+      "title": "Role-based workspace routing intent present",
+      "details": "The screen copy confirms OTP sign-in will route users into their 'correct mobile workspace', consistent with the multi-role architecture described in the PRD.",
+      "expected": "Login flow routes authenticated users to role-specific workspaces.",
+      "observed": "Screen copy: 'FacilityPro will use this session to route you into the correct mobile workspace.'"
+    }
+  ],
+  "raw_response": "```json\n{\n  \"status\": \"warning\",\n  \"summary\": \"Login screen is functional with correct OTP flow and role routing, but exposes debug preview credentials and a phase label directly in the production UI \u2014 a security and polish concern.\",\n  \"findings\": [\n    {\n      \"severity\": \"warning\",\n      \"title\": \"Preview credentials exposed in production UI\",\n      \"details\": \"The login screen renders a full list of role-specific test credentials (phone numbers + OTP '123456') as visible on-screen text. This is a developer/QA convenience that must be gated behind a debug build flag before any production release.\",\n      \"expected\": \"No hardcoded credentials or OTP hints visible to end users in a production or staging build.\",\n      \"observed\": \"10 role credentials (Guard 9999999999, Supervisor 8888888888, Manager 7777777777, HRMS 6666666666, Buyer 5555555555, AC tech 2222222222, Pest 1111111111, Delivery 2121212121, Service boy 2323232323, Supplier 4444444444, Vendor 3333333333) with shared OTP '123456' rendered in plain text on the screen.\"\n    },\n    {\n      \"severity\": \"warning\",\n      \"title\": \"'PHASE 1' implementation label visible in UI\",\n      \"details\": \"The string 'PHASE 1' is rendered as visible UI text on the login screen. Internal project phase labels are engineering/product artefacts and should not surface to end users.\",\n      \"expected\": \"No internal phase or sprint markers present in any user-facing view.\",\n      \"observed\": \"Text 'PHASE 1' visible as a screen element.\"\n    },\n    {\n      \"severity\": \"info\",\n      \"title\": \"Phone input pre-filled with Supervisor preview number\",\n      \"details\": \"The input field shows '+91 98765 43210' (i.e., 9876543210, the Supervisor preview number) already populated. Unclear whether this is a leftover value from a prior automated test step or a default. Should be blank on fresh navigation to the login screen.\",\n      \"expected\": \"Phone input field empty on initial screen load.\",\n      \"observed\": \"Field contains '+91 98765 43210'.\"\n    },\n    {\n      \"severity\": \"pass\",\n      \"title\": \"India number normalisation helper text present\",\n      \"details\": \"The screen correctly instructs users that 10-digit India numbers will be auto-prefixed with +91, matching expected localisation behaviour.\",\n      \"expected\": \"User guidance for India number format available.\",\n      \"observed\": \"Instruction text present: 'India numbers can be entered as `9876543210` and we\\u2019ll convert them to `+91` automatically.'\"\n    },\n    {\n      \"severity\": \"pass\",\n      \"title\": \"Role-based workspace routing intent present\",\n      \"details\": \"The screen copy confirms OTP sign-in will route users into their 'correct mobile workspace', consistent with the multi-role architecture described in the PRD.\",\n      \"expected\": \"Login flow routes authenticated users to role-specific workspaces.\",\n      \"observed\": \"Screen copy: 'FacilityPro will use this session to route you into the correct mobile workspace.'\"\n    }\n  ]\n}\n```"
+}

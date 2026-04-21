@@ -1,0 +1,7 @@
+{
+  "action_type": "back",
+  "target": "BACK",
+  "reason": "Fallback recovery action",
+  "text": "",
+  "metadata": {}
+}

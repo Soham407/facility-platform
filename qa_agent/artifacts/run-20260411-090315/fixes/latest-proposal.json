@@ -1,0 +1,6 @@
+{
+  "title": "Fix buyer tab tap by treating raw QA targets as resource IDs",
+  "branch_name": "fix/qa-buyer-tab-id-selector",
+  "commit_message": "fix: treat raw qa targets as Maestro resource ids",
+  "raw_response": "{\"title\":\"Fix buyer tab tap by treating raw QA targets as resource IDs\",\"branch_name\":\"fix/qa-buyer-tab-id-selector\",\"commit_message\":\"fix: treat raw qa targets as Maestro resource ids\"}"
+}

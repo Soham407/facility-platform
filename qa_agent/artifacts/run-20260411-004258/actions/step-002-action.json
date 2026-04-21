@@ -1,0 +1,7 @@
+{
+  "action_type": "scroll_tap",
+  "target": "Send OTP",
+  "reason": "Fallback: scroll to Send OTP",
+  "text": "",
+  "metadata": {}
+}

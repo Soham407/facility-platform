@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+import tempfile
+from pathlib import Path
 
 from .config import CliConfig
 from .maestro_client import fallback_action_for_screen
@@ -11,7 +13,7 @@ from .prd_loader import PrdChunk
 from .subprocess_utils import normalize_command
 
 
-def _run_cli(command: str, prompt: str, timeout_seconds: int) -> str:
+def _run_cli(command: str, prompt: str, timeout_seconds: int, cwd: Path | None = None) -> str:
     argv = CliConfig(command=command).argv
     if not argv:
         raise RuntimeError("LLM command is empty.")
@@ -21,6 +23,7 @@ def _run_cli(command: str, prompt: str, timeout_seconds: int) -> str:
         capture_output=True,
         text=True,
         timeout=timeout_seconds,
+        cwd=cwd,
     )
     if completed.returncode != 0:
         raise RuntimeError(completed.stderr.strip() or f"{command} returned {completed.returncode}")
@@ -129,9 +132,10 @@ Relevant PRD chunk:
 
 
 class FixerClient:
-    def __init__(self, cli: CliConfig, enabled: bool) -> None:
+    def __init__(self, cli: CliConfig, enabled: bool, repo_root: Path) -> None:
         self.cli = cli
         self.enabled = enabled
+        self.repo_root = repo_root
 
     def propose_fix(self, failure: FailureContext) -> FixProposal | None:
         if not self.enabled:
@@ -139,7 +143,7 @@ class FixerClient:
 
         prompt = f"""
 You are Codex, the Fixer in an overnight mobile QA system.
-You are not applying code right now. Propose a branch name and commit title only.
+Inspect the repository, apply the smallest code changes needed to address the failure, and then return strict JSON.
 
 Return strict JSON with keys:
 - title
@@ -150,7 +154,7 @@ Failure context:
 {json.dumps(failure.to_dict(), ensure_ascii=True)[:7000]}
 """
         try:
-            raw = _run_cli(self.cli.command, prompt, self.cli.timeout_seconds)
+            raw = self._run_fixer(prompt)
             payload = _extract_json(raw)
             return FixProposal(
                 title=str(payload.get("title", "night-shift fix")).strip(),
@@ -160,6 +164,61 @@ Failure context:
             )
         except Exception:
             return None
+
+    def _run_fixer(self, prompt: str) -> str:
+        argv = CliConfig(command=self.cli.command).argv
+        if not argv:
+            raise RuntimeError("Fixer command is empty.")
+
+        executable = Path(argv[0]).name.lower()
+        if executable == "codex" and (len(argv) == 1 or argv[1] != "exec"):
+            return self._run_codex_exec(argv[0], prompt)
+        return _run_cli(self.cli.command, prompt, self.cli.timeout_seconds, cwd=self.repo_root)
+
+    def _run_codex_exec(self, executable: str, prompt: str) -> str:
+        schema = {
+            "type": "object",
+            "properties": {
+                "title": {"type": "string"},
+                "branch_name": {"type": "string"},
+                "commit_message": {"type": "string"},
+            },
+            "required": ["title", "branch_name", "commit_message"],
+            "additionalProperties": False,
+        }
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as schema_file:
+            json.dump(schema, schema_file)
+            schema_path = schema_file.name
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as output_file:
+            output_path = output_file.name
+
+        command = [
+            executable,
+            "exec",
+            "--full-auto",
+            "--skip-git-repo-check",
+            "--cd",
+            str(self.repo_root),
+            "--output-schema",
+            schema_path,
+            "--output-last-message",
+            output_path,
+            prompt,
+        ]
+        try:
+            completed = subprocess.run(
+                normalize_command(command),
+                capture_output=True,
+                text=True,
+                timeout=max(self.cli.timeout_seconds, 300),
+                cwd=self.repo_root,
+            )
+            if completed.returncode != 0:
+                raise RuntimeError(completed.stderr.strip() or f"{executable} returned {completed.returncode}")
+            return Path(output_path).read_text(encoding="utf-8").strip()
+        finally:
+            Path(schema_path).unlink(missing_ok=True)
+            Path(output_path).unlink(missing_ok=True)
 
 
 def _extract_json(raw: str) -> dict:

@@ -1,0 +1,190 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+
+- assertVisible: "Mobile OTP Sign-In"
+- tapOn:
+    id: qa_login_phone_input
+- inputText: "9999999999"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_login_send_otp
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_login_send_otp
+
+- assertVisible: "Verify OTP"
+- tapOn:
+    id: qa_otp_code_input
+- inputText: "123456"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_otp_verify_button
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_otp_verify_button
+
+- assertVisible:
+    id: qa_guard_tab_home
+- tapOn:
+    id: qa_guard_duty_action
+- assertVisible:
+    id: qa_guard_home_message
+- assertVisible: "Shift started successfully."
+- tapOn:
+    id: qa_guard_sos_trigger
+- assertVisible:
+    id: qa_guard_home_message
+- assertVisible: "SOS alert recorded with live location and sent into the supervisor escalation flow."
+- scrollUntilVisible:
+    element:
+      id: qa_guard_reset_patrol
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_reset_patrol
+- scrollUntilVisible:
+    element:
+      id: qa_guard_open_checklist
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- assertVisible:
+    id: qa_guard_open_checklist
+
+- tapOn:
+    id: qa_guard_tab_checklist
+- assertVisible: "Guard Checklist"
+- assertVisible:
+    id: qa_guard_checklist_title_0
+- assertVisible: "Perimeter and gate lock check"
+- tapOn:
+    id: qa_guard_checklist_toggle_0
+- scrollUntilVisible:
+    element:
+      id: qa_guard_checklist_evidence_1
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_checklist_evidence_1
+- tapOn:
+    id: qa_guard_checklist_toggle_1
+- scrollUntilVisible:
+    element:
+      id: qa_guard_checklist_toggle_2
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_checklist_toggle_2
+- scrollUntilVisible:
+    element:
+      id: qa_guard_checklist_toggle_3
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_checklist_toggle_3
+- scrollUntilVisible:
+    element:
+      id: qa_guard_checklist_evidence_4
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_checklist_evidence_4
+- tapOn:
+    id: qa_guard_checklist_toggle_4
+- scrollUntilVisible:
+    element:
+      id: qa_guard_checklist_toggle_5
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_checklist_toggle_5
+- scrollUntilVisible:
+    element:
+      id: qa_guard_checklist_submit
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_checklist_submit
+- scrollUntilVisible:
+    element:
+      id: qa_guard_checklist_submit
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- assertVisible:
+    id: qa_guard_checklist_submit
+
+- tapOn:
+    id: qa_guard_tab_visitors
+- assertVisible: "Visitor Logging"
+- tapOn:
+    id: qa_guard_frequent_visitor_maid-anita
+- scrollUntilVisible:
+    element:
+      id: qa_guard_save_visitor
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_save_visitor
+- assertVisible:
+    id: qa_guard_visitors_message
+- scrollUntilVisible:
+    element:
+      id: qa_guard_visitor_name_0
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- assertVisible:
+    id: qa_guard_visitor_name_0
+- assertVisible: "Anita Housekeeping"
+- tapOn:
+    id: qa_guard_checkout_visitor_0
+- assertVisible:
+    id: qa_guard_visitors_message
+
+- tapOn:
+    id: qa_guard_tab_contacts
+- assertVisible: "Emergency Contacts"
+- assertVisible:
+    id: qa_guard_contact_label_0
+- assertVisible: "Security Supervisor"
+
+- tapOn:
+    id: qa_guard_tab_home
+- scrollUntilVisible:
+    element:
+      id: qa_guard_open_checklist
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- assertVisible:
+    id: qa_guard_open_checklist

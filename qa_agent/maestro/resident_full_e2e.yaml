@@ -1,0 +1,127 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+
+- assertVisible: "Mobile OTP Sign-In"
+- tapOn:
+    id: qa_login_phone_input
+- inputText: "9999999999"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_login_send_otp
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_login_send_otp
+
+- assertVisible: "Verify OTP"
+- tapOn:
+    id: qa_otp_code_input
+- inputText: "123456"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_otp_verify_button
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_otp_verify_button
+
+- assertVisible:
+    id: qa_guard_tab_home
+- tapOn:
+    id: qa_guard_tab_visitors
+- assertVisible: "Visitor Logging"
+- tapOn:
+    id: qa_guard_frequent_visitor_maid-anita
+- scrollUntilVisible:
+    element:
+      id: qa_guard_save_visitor
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_save_visitor
+- assertVisible:
+    id: qa_guard_visitors_message
+
+- tapOn:
+    id: qa_guard_tab_home
+- scrollUntilVisible:
+    element:
+      id: qa_guard_sign_out
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_guard_sign_out
+
+- assertVisible: "Mobile OTP Sign-In"
+- tapOn:
+    id: qa_login_phone_input
+- inputText: "4141414141"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_login_send_otp
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_login_send_otp
+
+- assertVisible: "Verify OTP"
+- tapOn:
+    id: qa_otp_code_input
+- inputText: "123456"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_otp_verify_button
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- tapOn:
+    id: qa_otp_verify_button
+
+- assertVisible:
+    id: qa_resident_tab_home
+- assertVisible: "Gate approval inbox is live"
+- assertVisible: "Waiting approvals"
+
+- tapOn:
+    id: qa_resident_tab_approvals
+- assertVisible: "Resident visitor decisions"
+- scrollUntilVisible:
+    element:
+      id: qa_resident_approval_card_0
+    direction: DOWN
+    timeout: 15000
+    speed: 40
+    visibilityPercentage: 100
+- assertVisible:
+    id: qa_resident_approval_name_0
+- assertVisible: "Anita Housekeeping"
+- tapOn:
+    id: qa_resident_approve_visitor_0
+- assertVisible:
+    id: qa_resident_approvals_message
+
+- tapOn:
+    id: qa_resident_tab_alerts
+- assertVisible: "Notification history"
+- assertVisible: "Resident notification inbox"
+
+- tapOn:
+    id: qa_resident_tab_home
+- assertVisible: "Gate approval inbox is live"
+

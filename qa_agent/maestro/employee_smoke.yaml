@@ -1,0 +1,40 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_employee
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_employee
+- extendedWaitUntil:
+    visible:
+      id: qa_hrms_tab_home
+    timeout: 30000
+- assertVisible:
+    id: qa_hrms_tab_attendance
+- assertVisible:
+    id: qa_hrms_tab_leave
+- assertVisible:
+    id: qa_hrms_tab_payslips
+- assertVisible:
+    id: qa_hrms_tab_documents
+- tapOn:
+    id: qa_hrms_tab_attendance
+- assertVisible: "Selfie + geo-fence attendance"
+- tapOn:
+    id: qa_hrms_tab_leave
+- assertVisible: "Leave desk"
+- tapOn:
+    id: qa_hrms_tab_payslips
+- assertVisible: "Payslips and salary view"
+- tapOn:
+    id: qa_hrms_tab_documents
+- assertVisible: "Document vault"
+- tapOn:
+    id: qa_hrms_tab_home
+- assertVisible: "HRMS command deck"

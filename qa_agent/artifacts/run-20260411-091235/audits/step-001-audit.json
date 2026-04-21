@@ -1,0 +1,28 @@
+{
+  "status": "warning",
+  "summary": "Login screen renders correctly with OTP sign-in flow, but plaintext preview credentials and a debug info panel are visible in the UI \u2014 acceptable in a QA build but must not reach production.",
+  "findings": [
+    {
+      "severity": "warning",
+      "title": "Debug credential hints exposed in live UI",
+      "details": "The screen renders a visible info block listing test phone numbers and OTPs for all 11 role previews (Guard \u2192 Vendor). This text is surfaced as UI content, not just a code comment or internal doc.",
+      "expected": "Production builds should contain no plaintext credential hints; QA/staging builds may display them only behind a feature flag or in a collapsible developer panel.",
+      "observed": "All preview credentials (e.g. '9999999999 / 123456' for Guard through Supplier) are rendered as visible screen text at runtime."
+    },
+    {
+      "severity": "info",
+      "title": "PHASE 1 label visible on screen",
+      "details": "The text 'PHASE 1' appears as a UI label, presumably indicating a phased rollout marker. If intentional branding it is fine; if a debug tag it should be removed before GA.",
+      "expected": "Phase labels should not appear in end-user-facing UI unless they are deliberate product copy.",
+      "observed": "'PHASE 1' rendered as visible screen text."
+    },
+    {
+      "severity": "info",
+      "title": "PRD coverage gap \u2014 login screen requirements not included in supplied chunk",
+      "details": "The supplied PRD chunk covers only Section 10 (Out-of-Scope features). No direct login/authentication acceptance criteria were provided for a line-by-line comparison. No out-of-scope feature appears to be incorrectly present on this screen.",
+      "expected": "Full audit requires Section covering authentication / OTP sign-in UX requirements.",
+      "observed": "Screen content does not conflict with any out-of-scope boundary listed in Section 10."
+    }
+  ],
+  "raw_response": "```json\n{\n  \"status\": \"warning\",\n  \"summary\": \"Login screen renders correctly with OTP sign-in flow, but plaintext preview credentials and a debug info panel are visible in the UI \u2014 acceptable in a QA build but must not reach production.\",\n  \"findings\": [\n    {\n      \"severity\": \"warning\",\n      \"title\": \"Debug credential hints exposed in live UI\",\n      \"details\": \"The screen renders a visible info block listing test phone numbers and OTPs for all 11 role previews (Guard \u2192 Vendor). This text is surfaced as UI content, not just a code comment or internal doc.\",\n      \"expected\": \"Production builds should contain no plaintext credential hints; QA/staging builds may display them only behind a feature flag or in a collapsible developer panel.\",\n      \"observed\": \"All preview credentials (e.g. '9999999999 / 123456' for Guard through Supplier) are rendered as visible screen text at runtime.\"\n    },\n    {\n      \"severity\": \"info\",\n      \"title\": \"PHASE 1 label visible on screen\",\n      \"details\": \"The text 'PHASE 1' appears as a UI label, presumably indicating a phased rollout marker. If intentional branding it is fine; if a debug tag it should be removed before GA.\",\n      \"expected\": \"Phase labels should not appear in end-user-facing UI unless they are deliberate product copy.\",\n      \"observed\": \"'PHASE 1' rendered as visible screen text.\"\n    },\n    {\n      \"severity\": \"info\",\n      \"title\": \"PRD coverage gap \u2014 login screen requirements not included in supplied chunk\",\n      \"details\": \"The supplied PRD chunk covers only Section 10 (Out-of-Scope features). No direct login/authentication acceptance criteria were provided for a line-by-line comparison. No out-of-scope feature appears to be incorrectly present on this screen.\",\n      \"expected\": \"Full audit requires Section covering authentication / OTP sign-in UX requirements.\",\n      \"observed\": \"Screen content does not conflict with any out-of-scope boundary listed in Section 10.\"\n    }\n  ]\n}\n```"
+}

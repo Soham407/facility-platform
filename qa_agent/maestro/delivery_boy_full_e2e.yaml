@@ -1,0 +1,49 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_delivery_boy
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_delivery_boy
+- extendedWaitUntil:
+    visible:
+      id: qa_service_tab_home
+    timeout: 30000
+
+- assertVisible: "Delivery workspace"
+- assertVisible:
+    id: qa_service_tab_tasks
+- assertVisible:
+    id: qa_service_tab_materials
+- assertVisible:
+    id: qa_service_tab_proof
+
+- tapOn:
+    id: qa_service_tab_tasks
+- assertVisible: "Assigned jobs and field progression"
+- assertVisible:
+    id: qa_service_task_card_0
+- assertVisible: "Housekeeping consumables delivery"
+
+- tapOn:
+    id: qa_service_tab_materials
+- assertVisible: "Delivery manifest"
+- assertVisible:
+    id: qa_service_delivery_note_card_0
+- assertVisible: "Housekeeping consumables delivery"
+
+- tapOn:
+    id: qa_service_tab_proof
+- assertVisible: "Delivery proof and attendance"
+- assertVisible:
+    id: qa_service_proof_selected_title
+
+- tapOn:
+    id: qa_service_tab_home
+- assertVisible: "Delivery workspace"

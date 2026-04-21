@@ -1,0 +1,9 @@
+{
+  "action_type": "input",
+  "target": "qa_login_phone_input",
+  "reason": "Entering the guard preview mobile number to proceed with the sign-in flow.",
+  "text": "9999999999",
+  "metadata": {
+    "raw_response": "```json\n{\n  \"action_type\": \"input\",\n  \"target\": \"qa_login_phone_input\",\n  \"text\": \"9999999999\",\n  \"reason\": \"Entering the guard preview mobile number to proceed with the sign-in flow.\"\n}\n```"
+  }
+}

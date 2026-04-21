@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import shlex
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -37,6 +38,10 @@ class NightShiftConfig:
     emulator_id: str = "emulator-5554"
     app_id: str = "com.facilitypro.mobile"
     app_start_mode: str = "dev_client"
+    metro_host: str = "10.0.2.2"
+    login_role: str = "security_guard"
+    login_phone: str = "9999999999"
+    login_otp: str = "123456"
     mobile_start_command: str = ""
     app_launch_command: str = ""
     app_stop_command: str = ""
@@ -47,7 +52,7 @@ class NightShiftConfig:
     logcat_lines: int = 250
     allow_navigator: bool = True
     allow_auditor: bool = True
-    allow_fixer: bool = False
+    allow_fixer: bool = True
     reset_before_run: bool = False
     supabase_reset_command: str = ""
     supabase_seed_command: str = ""
@@ -73,6 +78,10 @@ class NightShiftConfig:
             emulator_id=os.getenv("QA_EMULATOR_ID", "emulator-5554"),
             app_id=os.getenv("QA_APP_ID", "com.facilitypro.mobile"),
             app_start_mode=os.getenv("QA_APP_START_MODE", "dev_client").strip().lower(),
+            metro_host=os.getenv("QA_METRO_HOST", _default_metro_host()),
+            login_role=os.getenv("QA_LOGIN_ROLE", "security_guard"),
+            login_phone=os.getenv("QA_LOGIN_PHONE", "9999999999"),
+            login_otp=os.getenv("QA_LOGIN_OTP", "123456"),
             mobile_start_command=os.getenv("QA_MOBILE_START_COMMAND", ""),
             app_launch_command=os.getenv("QA_APP_LAUNCH_COMMAND", ""),
             app_stop_command=os.getenv("QA_APP_STOP_COMMAND", ""),
@@ -83,7 +92,7 @@ class NightShiftConfig:
             logcat_lines=int(os.getenv("QA_LOGCAT_LINES", "250")),
             allow_navigator=_env_flag("QA_ALLOW_NAVIGATOR", True),
             allow_auditor=_env_flag("QA_ALLOW_AUDITOR", True),
-            allow_fixer=_env_flag("QA_ALLOW_FIXER", False),
+            allow_fixer=_env_flag("QA_ALLOW_FIXER", True),
             reset_before_run=_env_flag("QA_RESET_BEFORE_RUN", False),
             supabase_reset_command=os.getenv("QA_SUPABASE_RESET_COMMAND", ""),
             supabase_seed_command=os.getenv("QA_SUPABASE_SEED_COMMAND", ""),
@@ -94,21 +103,40 @@ def split_command(command: str) -> list[str]:
     command = command.strip()
     if not command:
         return []
-    return shlex.split(command, posix=False)
+    # posix=True is correct on macOS/Linux (removes surrounding quotes, handles escapes).
+    # posix=False is the Windows behaviour; keep it there to preserve backslash path handling.
+    return shlex.split(command, posix=(sys.platform != "win32"))
 
 
 def resolve_adb_command(configured_value: str) -> str:
     if configured_value:
         return configured_value
 
-    fallback_candidates = [
-        Path(r"C:\Users\MSI\AppData\Local\Android\Sdk\platform-tools\adb.exe"),
-        Path.home() / "AppData" / "Local" / "Android" / "Sdk" / "platform-tools" / "adb.exe",
-        Path(os.getenv("LOCALAPPDATA", "")) / "Android" / "Sdk" / "platform-tools" / "adb.exe",
-    ]
+    if sys.platform == "win32":
+        fallback_candidates = [
+            Path(r"C:\Users\MSI\AppData\Local\Android\Sdk\platform-tools\adb.exe"),
+            Path.home() / "AppData" / "Local" / "Android" / "Sdk" / "platform-tools" / "adb.exe",
+            Path(os.getenv("LOCALAPPDATA", "")) / "Android" / "Sdk" / "platform-tools" / "adb.exe",
+        ]
+    else:
+        # macOS (Intel and Apple Silicon M1/M2/M3)
+        fallback_candidates = [
+            Path.home() / "Library" / "Android" / "sdk" / "platform-tools" / "adb",
+            Path("/opt/homebrew/bin/adb"),   # Homebrew on Apple Silicon
+            Path("/usr/local/bin/adb"),       # Homebrew on Intel Mac
+        ]
 
     for candidate in fallback_candidates:
         if str(candidate).strip() and candidate.exists():
             return str(candidate)
 
     return "adb"
+
+
+def _default_metro_host() -> str:
+    """
+    Android emulator reaches the host machine via 10.0.2.2.
+    iOS Simulator and physical devices use localhost / the machine's LAN IP.
+    Override with QA_METRO_HOST when not using an Android emulator.
+    """
+    return "10.0.2.2"

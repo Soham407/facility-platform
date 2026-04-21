@@ -1,0 +1,36 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_pest_control_technician
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_pest_control_technician
+- extendedWaitUntil:
+    visible:
+      id: qa_service_tab_home
+    timeout: 30000
+- assertVisible:
+    id: qa_service_tab_tasks
+- assertVisible:
+    id: qa_service_tab_materials
+- assertVisible:
+    id: qa_service_tab_proof
+- tapOn:
+    id: qa_service_tab_tasks
+- assertVisible: "Assigned jobs and field progression"
+- tapOn:
+    id: qa_service_tab_materials
+- assertVisible: "Chemical request queue"
+- tapOn:
+    id: qa_service_tab_proof
+- assertVisible: "Safety, attendance, and service proof"
+- assertVisible: "Mandatory PPE checklist"
+- tapOn:
+    id: qa_service_tab_home
+- assertVisible: "Pest Control workspace"

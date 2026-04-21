@@ -1,0 +1,142 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_supplier
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_supplier
+- extendedWaitUntil:
+    visible:
+      id: qa_supplier_tab_home
+    timeout: 30000
+
+# Home
+- assertVisible: "Supplier fulfillment desk"
+- assertVisible: "Refresh supplier feed"
+
+# Indents: accept the seeded forwarded indent and verify it no longer shows the accept action
+- tapOn:
+    id: qa_supplier_tab_indents
+- assertVisible: "Indent review and response"
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_indent_accept_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_supplier_indent_title_0
+- assertVisible: "Lobby housekeeping consumables"
+- tapOn:
+    id: qa_supplier_indent_accept_0
+- assertVisible:
+    id: qa_supplier_indents_message
+- assertNotVisible:
+    id: qa_supplier_indent_accept_0
+
+# Orders: acknowledge and dispatch the newly created top PO
+- tapOn:
+    id: qa_supplier_tab_orders
+- assertVisible: "Purchase order acknowledgement and dispatch"
+- assertVisible:
+    id: qa_supplier_po_title_0
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_po_acknowledge_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_po_acknowledge_0
+- assertVisible:
+    id: qa_supplier_orders_message
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_po_vehicle_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_po_vehicle_0
+- inputText: "MH 12 AB 9081"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_po_dispatch_note_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_po_dispatch_note_0
+- inputText: "Crew leaves at 18:30, unloading at service gate."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_po_dispatch_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_po_dispatch_0
+- assertVisible:
+    id: qa_supplier_orders_message
+- assertVisible: "MH 12 AB 9081"
+- assertVisible: "Crew leaves at 18:30, unloading at service gate."
+
+# Billing: create a bill for the top eligible PO and verify it lands in the billing queue
+- tapOn:
+    id: qa_supplier_tab_billing
+- assertVisible: "Billing submission and payout visibility"
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_bill_select_0
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_bill_select_0
+- tapOn:
+    id: qa_supplier_bill_number
+- inputText: "BILL-E2E-9001"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_bill_amount
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_bill_amount
+- inputText: "5600"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_bill_note
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_bill_note
+- inputText: "Cycle 1 mobile supplier billing handoff complete."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_submit_bill
+    direction: DOWN
+    timeout: 15000
+- tapOn:
+    id: qa_supplier_submit_bill
+- assertVisible:
+    id: qa_supplier_billing_message
+- scrollUntilVisible:
+    element:
+      id: qa_supplier_bill_title_0
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    id: qa_supplier_bill_title_0
+- assertVisible: "BILL-E2E-9001"
+- assertVisible: "Cycle 1 mobile supplier billing handoff complete."
+
+# Return home
+- tapOn:
+    id: qa_supplier_tab_home
+- assertVisible: "Refresh supplier feed"

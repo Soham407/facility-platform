@@ -1,0 +1,9 @@
+{
+  "action_type": "tap",
+  "target": "Send OTP",
+  "reason": "Request an OTP to proceed with the authentication process using the pre-filled phone number.",
+  "text": "",
+  "metadata": {
+    "raw_response": "```json\n{\n  \"action_type\": \"tap\",\n  \"target\": \"Send OTP\",\n  \"reason\": \"Request an OTP to proceed with the authentication process using the pre-filled phone number.\"\n}\n```"
+  }
+}

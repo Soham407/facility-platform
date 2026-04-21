@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "summary": "Login screen renders correctly with phone/OTP flow and QA role-preview shortcuts. No PRD violations detected against the provided Out-of-Scope section.",
+  "findings": [
+    {
+      "severity": "info",
+      "title": "QA preview shortcuts visible on login screen",
+      "details": "Ten 'Preview <role>' buttons are rendered on the login screen (buyer, AC technician, pest control, delivery boy, service boy, supplier, vendor, security supervisor, society manager, HRMS employee). These are test-harness shortcuts (resource IDs prefixed qa_login_preview_*) and should not appear in a production build.",
+      "expected": "Preview shortcuts present only in debug/QA builds; absent in production release.",
+      "observed": "All 10 preview-role buttons visible alongside the standard Send OTP flow."
+    },
+    {
+      "severity": "info",
+      "title": "Phone number pre-filled with test number 9999999999",
+      "details": "The phone input (qa_login_phone_input) is pre-populated with '9999999999', consistent with an automated QA run. No impact on functional correctness.",
+      "expected": "Empty or QA-seeded phone number depending on run mode.",
+      "observed": "9999999999 present in input field."
+    },
+    {
+      "severity": "info",
+      "title": "PRD chunk covers Out-of-Scope only \u2014 no login spec provided",
+      "details": "The supplied PRD chunk (Section 10) defines web-only features and does not specify login screen requirements. Full conformance check against login UX/copy/flow spec is not possible with this chunk alone.",
+      "expected": "PRD section covering authentication flow (phone entry, OTP, error states).",
+      "observed": "Only Section 10 (Out of Scope) provided; no conflicts with it were found on this screen."
+    }
+  ],
+  "raw_response": "```json\n{\n  \"status\": \"pass\",\n  \"summary\": \"Login screen renders correctly with phone/OTP flow and QA role-preview shortcuts. No PRD violations detected against the provided Out-of-Scope section.\",\n  \"findings\": [\n    {\n      \"severity\": \"info\",\n      \"title\": \"QA preview shortcuts visible on login screen\",\n      \"details\": \"Ten 'Preview <role>' buttons are rendered on the login screen (buyer, AC technician, pest control, delivery boy, service boy, supplier, vendor, security supervisor, society manager, HRMS employee). These are test-harness shortcuts (resource IDs prefixed qa_login_preview_*) and should not appear in a production build.\",\n      \"expected\": \"Preview shortcuts present only in debug/QA builds; absent in production release.\",\n      \"observed\": \"All 10 preview-role buttons visible alongside the standard Send OTP flow.\"\n    },\n    {\n      \"severity\": \"info\",\n      \"title\": \"Phone number pre-filled with test number 9999999999\",\n      \"details\": \"The phone input (qa_login_phone_input) is pre-populated with '9999999999', consistent with an automated QA run. No impact on functional correctness.\",\n      \"expected\": \"Empty or QA-seeded phone number depending on run mode.\",\n      \"observed\": \"9999999999 present in input field.\"\n    },\n    {\n      \"severity\": \"info\",\n      \"title\": \"PRD chunk covers Out-of-Scope only \u2014 no login spec provided\",\n      \"details\": \"The supplied PRD chunk (Section 10) defines web-only features and does not specify login screen requirements. Full conformance check against login UX/copy/flow spec is not possible with this chunk alone.\",\n      \"expected\": \"PRD section covering authentication flow (phone entry, OTP, error states).\",\n      \"observed\": \"Only Section 10 (Out of Scope) provided; no conflicts with it were found on this screen.\"\n    }\n  ]\n}\n```"
+}

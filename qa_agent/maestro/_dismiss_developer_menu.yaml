@@ -1,0 +1,25 @@
+appId: com.facilitypro.mobile
+---
+- runFlow:
+    when:
+      visible: "Development Build"
+    commands:
+      - runFlow:
+          when:
+            visible: "http://10.0.2.2:8081"
+          commands:
+            - tapOn: "http://10.0.2.2:8081"
+
+- runFlow:
+    when:
+      visible: "This is the developer menu."
+    commands:
+      - tapOn:
+          point: "93%,10%"
+
+- runFlow:
+    when:
+      visible: "Toggle performance monitor"
+    commands:
+      - tapOn:
+          point: "93%,10%"

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "deploy-dispatch-notification-queue",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/deploy-dispatch-notification-queue-attempt-1.log"
+  },
+  {
+    "name": "verify-push-token-registration",
+    "status": "manual",
+    "attempts": 1,
+    "error": "$ supabase db query 'SELECT count(*) AS cnt\n           FROM push_tokens pt\n           JOIN auth.users u ON u.id = pt.user_id\n           WHERE pt.is_active = true\n             AND COALESCE(pt.token_type, '\\''fcm'\\'') = '\\''fcm'\\''\n             AND lower(u.email) IN ('\\''guard@test.com'\\'', '\\''rohit@test.com'\\'', '\\''resident@test.com'\\'');' --linked\ncwd: /Volumes/Soham/untitled folder/facility-platform/Solvesxx_web\ntimeout_seconds: 30\nexit_code: 0\n\n--- STDOUT ---\n\u250c\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 cnt \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 0   \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2518\n\n--- STDERR ---\nInitialising login role...",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/verify-push-token-registration-attempt-1.log"
+  },
+  {
+    "name": "staging-e2e-approve",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-e2e-approve-attempt-1.log"
+  },
+  {
+    "name": "verify-notification-insertion",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/verify-notification-insertion-attempt-1.log"
+  },
+  {
+    "name": "verify-notification-dispatch",
+    "status": "fail",
+    "attempts": 2,
+    "error": "$ supabase db query 'SELECT trigger_mobile_notification_queue();' --linked\ncwd: /Volumes/Soham/untitled folder/facility-platform/Solvesxx_web\ntimeout_seconds: 30\nexit_code: 0\n\n--- STDOUT ---\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 trigger_mobile_notification_queue \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502                                   \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n--- STDERR ---\nInitialising login role...\n\n--- FINAL POLL RESULT ---\n\n$ supabase db query 'SELECT id, delivery_state, created_at\n               FROM notifications\n               WHERE notification_type = '\\''visitor_at_gate'\\''\n                 AND created_at >= '\\''2026-04-17T00:11:04.390063+05:30'\\''::timestamptz\n               ORDER BY created_at DESC\n               LIMIT 1;' --linked\ncwd: /Volumes/Soham/untitled folder/facility-platform/Solvesxx_web\ntimeout_seconds: 30\nexit_code: 0\n\n--- STDOUT ---\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                  id                  \u2502 delivery_state \u2502          created_at           \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 8df52d2e-dacd-4b1b-8740-fbc8513b7069 \u2502 push_queued    \u2502 2026-04-16 18:43:17.844879+00 \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n--- STDERR ---\nInitialising login role...",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/verify-notification-dispatch-attempt-2.log"
+  },
+  {
+    "name": "staging-e2e-deny",
+    "status": "fail",
+    "attempts": 3,
+    "error": "$ '/Volumes/Soham/untitled folder/facility-platform/qa_agent/run_guard_resident_staging_deny_e2e.sh'\ncwd: /Volumes/Soham/untitled folder/facility-platform\ntimeout_seconds: 300\nexit_code: 1\n\n--- STDOUT ---\nEmulator already running.\nMetro already running on port 8081.\nForce-stopping the app for a clean guard/resident deny staging run\nResetting prior test visitors for Rohit Verna's flat\nRunning guard resident deny staging flow: /Volumes/Soham/untitled folder/facility-platform/qa_agent/maestro/guard_resident_staging_deny_e2e.yaml\nEmulator already running.\nMetro already running on port 8081.\n\n--- STDERR ---\nInitialising login role...\nA new version of Supabase CLI is available: v2.90.0 (currently installed v2.84.2)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\nMaestro flow not found: /Volumes/Soham/untitled folder/facility-platform/qa_agent/maestro/guard_resident_staging_deny_e2e.yaml",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-e2e-deny-attempt-3.log"
+  },
+  {
+    "name": "staging-e2e-checklist",
+    "status": "fail",
+    "attempts": 3,
+    "error": "$ '/Volumes/Soham/untitled folder/facility-platform/qa_agent/run_guard_checklist_staging_e2e.sh'\ncwd: /Volumes/Soham/untitled folder/facility-platform\ntimeout_seconds: 300\nexit_code: 1\n\n--- STDOUT ---\nEmulator already running.\nMetro already running on port 8081.\nForce-stopping the app for a clean guard checklist staging run\nResetting today's guard checklist response for a clean backend verification\nRunning guard checklist staging flow: /Volumes/Soham/untitled folder/facility-platform/qa_agent/maestro/guard_checklist_staging_e2e.yaml\nEmulator already running.\nMetro already running on port 8081.\n\n--- STDERR ---\nInitialising login role...\nA new version of Supabase CLI is available: v2.90.0 (currently installed v2.84.2)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\nMaestro flow not found: /Volumes/Soham/untitled folder/facility-platform/qa_agent/maestro/guard_checklist_staging_e2e.yaml",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-e2e-checklist-attempt-3.log"
+  },
+  {
+    "name": "staging-e2e-sos",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-e2e-sos-attempt-1.log"
+  },
+  {
+    "name": "verify-panic-notification",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/verify-panic-notification-attempt-1.log"
+  },
+  {
+    "name": "web-admin-backend-verification",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/web-admin-backend-verification-attempt-1.log"
+  },
+  {
+    "name": "staging-fallback-audit",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-fallback-audit-attempt-1.log"
+  }
+]

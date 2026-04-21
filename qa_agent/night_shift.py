@@ -22,6 +22,9 @@ class RunState:
     steps: list[RunStep] = field(default_factory=list)
     findings_total: int = 0
     failures_total: int = 0
+    last_failure_summary: str = ""
+    last_fix_branch: str = ""
+    last_fix_commit: str = ""
 
     def to_dict(self) -> dict:
         return {
@@ -30,20 +33,24 @@ class RunState:
             "steps": [step.to_dict() for step in self.steps],
             "findings_total": self.findings_total,
             "failures_total": self.failures_total,
+            "last_failure_summary": self.last_failure_summary,
+            "last_fix_branch": self.last_fix_branch,
+            "last_fix_commit": self.last_fix_commit,
         }
 
 
 class NightShiftRunner:
     def __init__(self, config: NightShiftConfig) -> None:
         self.config = config
+        self.run_started_at = time.time()
         self.artifacts = ArtifactStore(config.artifacts_root)
         self.prd = PrdLibrary(config.prd_path, config.prd_chunks_root)
         classifier = ScreenClassifier()
         self.maestro = MaestroClient(config, classifier)
         self.navigator = NavigatorClient(config.gemini, config.allow_navigator)
         self.auditor = AuditorClient(config.claude, config.allow_auditor)
-        self.fixer = FixerClient(config.codex, config.allow_fixer)
-        self.git = GitRecovery(config.repo_root)
+        self.fixer = FixerClient(config.codex, config.allow_fixer, config.repo_root)
+        self.git = GitRecovery(config.repo_root, run_started_at=self.run_started_at)
         self.supabase = SupabaseResetClient(config)
         self.state = RunState()
 
@@ -63,6 +70,7 @@ class NightShiftRunner:
                     return exit_code
             except Exception as exc:
                 self.state.failures_total += 1
+                self.state.last_failure_summary = str(exc)
                 print(f"[qa_agent] failure before step {step_index}: {exc}")
                 failure = FailureContext(
                     failure_type="runner_exception",
@@ -107,6 +115,7 @@ class NightShiftRunner:
                 log_excerpt=self.maestro.get_logcat_excerpt(self.config.logcat_lines),
             )
             self.state.failures_total += 1
+            self.state.last_failure_summary = failure.summary
             self.artifacts.append_event("failure", failure)
             self._attempt_fix_capture(failure)
             return 1
@@ -136,6 +145,7 @@ class NightShiftRunner:
                 attempted_action=action,
             )
             self.state.failures_total += 1
+            self.state.last_failure_summary = failure.summary
             self.artifacts.append_event("failure", failure)
             self._attempt_fix_capture(failure)
             return 1
@@ -165,6 +175,8 @@ class NightShiftRunner:
         self.artifacts.append_event("fix_proposal", proposal)
         try:
             git_result = self.git.capture_fix_branch(proposal)
+            self.state.last_fix_branch = git_result.get("fix_branch", "")
+            self.state.last_fix_commit = git_result.get("commit_sha", "")
             self.artifacts.append_event("git_fix_branch", git_result)
         except Exception as exc:
             self.artifacts.append_event("git_fix_branch_error", {"message": str(exc)})
@@ -180,9 +192,14 @@ class NightShiftRunner:
             f"- Findings recorded: {self.state.findings_total}",
             f"- Failures recorded: {self.state.failures_total}",
             f"- Artifacts: `{self.artifacts.run_root}`",
-            "",
-            "## Recent Steps",
         ]
+        if self.state.last_failure_summary:
+            lines.append(f"- Last failure: `{self.state.last_failure_summary}`")
+        if self.state.last_fix_branch:
+            lines.append(f"- Fix branch: `{self.state.last_fix_branch}`")
+        if self.state.last_fix_commit:
+            lines.append(f"- Fix commit: `{self.state.last_fix_commit}`")
+        lines.extend(["", "## Recent Steps"])
         for step in self.state.steps[-10:]:
             lines.append(
                 f"- Step {step.index}: `{step.screen_label}` audit=`{step.audit_status}` action=`{step.action_type}:{step.action_target}`"

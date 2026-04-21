@@ -1,0 +1,35 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_society_manager
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_society_manager
+- extendedWaitUntil:
+    visible:
+      id: qa_oversight_tab_home
+    timeout: 30000
+- assertVisible:
+    id: qa_oversight_tab_alerts
+- assertVisible:
+    id: qa_oversight_tab_operations
+- assertVisible:
+    id: qa_oversight_tab_tickets
+- tapOn:
+    id: qa_oversight_tab_alerts
+- assertVisible: "Panic Log Feed"
+- tapOn:
+    id: qa_oversight_tab_operations
+- assertVisible: "Checklist, visitor, and attendance board"
+- tapOn:
+    id: qa_oversight_tab_tickets
+- assertVisible: "Behavior and material tickets"
+- tapOn:
+    id: qa_oversight_tab_home
+- assertVisible: "Site Oversight Hub"

@@ -1,0 +1,35 @@
+appId: com.facilitypro.mobile
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Mobile OTP Sign-In"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: qa_login_preview_ac_technician
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    id: qa_login_preview_ac_technician
+- extendedWaitUntil:
+    visible:
+      id: qa_service_tab_home
+    timeout: 30000
+- assertVisible:
+    id: qa_service_tab_tasks
+- assertVisible:
+    id: qa_service_tab_materials
+- assertVisible:
+    id: qa_service_tab_proof
+- tapOn:
+    id: qa_service_tab_tasks
+- assertVisible: "Assigned jobs and field progression"
+- tapOn:
+    id: qa_service_tab_materials
+- assertVisible: "Parts and equipment supply"
+- tapOn:
+    id: qa_service_tab_proof
+- assertVisible: "Attendance and proof capture"
+- tapOn:
+    id: qa_service_tab_home
+- assertVisible: "AC Technician workspace"

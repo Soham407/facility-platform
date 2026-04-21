@@ -23,6 +23,8 @@ class PrdLibrary:
         for key, chunk in self.chunks.items():
             if key in screen_id:
                 return chunk
+        if not self.chunks:
+            return PrdChunk(key="empty", heading="No PRD", content="")
         return self.chunks.get("overview", next(iter(self.chunks.values())))
 
     def _load_or_build_chunks(self) -> dict[str, PrdChunk]:

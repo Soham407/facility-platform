@@ -1,0 +1,9 @@
+{
+  "action_type": "tap",
+  "target": "qa_buyer_tab_requests",
+  "reason": "Navigate to the Requests tab to explore the status and details of service or material requests.",
+  "text": "",
+  "metadata": {
+    "raw_response": "```json\n{\n  \"action_type\": \"tap\",\n  \"target\": \"qa_buyer_tab_requests\",\n  \"reason\": \"Navigate to the Requests tab to explore the status and details of service or material requests.\"\n}\n```"
+  }
+}

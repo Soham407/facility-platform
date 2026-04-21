@@ -1,0 +1,101 @@
+[
+  {
+    "name": "deploy-dispatch-notification-queue",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/deploy-dispatch-notification-queue-attempt-1.log"
+  },
+  {
+    "name": "verify-push-token-registration",
+    "status": "manual",
+    "attempts": 1,
+    "error": "$ supabase db query 'SELECT count(*) AS cnt\n           FROM push_tokens pt\n           JOIN auth.users u ON u.id = pt.user_id\n           WHERE pt.is_active = true\n             AND COALESCE(pt.token_type, '\\''fcm'\\'') = '\\''fcm'\\''\n             AND lower(u.email) IN ('\\''guard@test.com'\\'', '\\''rohit@test.com'\\'', '\\''resident@test.com'\\'');' --linked\ncwd: /Volumes/Soham/untitled folder/facility-platform/Solvesxx_web\ntimeout_seconds: 30\nexit_code: 0\n\n--- STDOUT ---\n\u250c\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 cnt \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 0   \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2518\n\n--- STDERR ---\nInitialising login role...",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/verify-push-token-registration-attempt-1.log"
+  },
+  {
+    "name": "staging-e2e-approve",
+    "status": "fail",
+    "attempts": 3,
+    "error": "$ '/Volumes/Soham/untitled folder/facility-platform/qa_agent/run_guard_resident_staging_e2e.sh'\ncwd: /Volumes/Soham/untitled folder/facility-platform\ntimeout_seconds: 300\nexit_code: 1\n\n--- STDOUT ---\nEmulator already running.\nMetro already running on port 8081.\nClearing Android app state for a clean guard/resident staging run\nResetting prior test visitors for Rohit Verna's flat\nRunning guard resident staging flow: /Volumes/Soham/untitled folder/facility-platform/qa_agent/maestro/guard_resident_staging_e2e.yaml\nEmulator already running.\nMetro already running on port 8081.\nRunning flow: /Volumes/Soham/untitled folder/facility-platform/qa_agent/maestro/guard_resident_staging_e2e.yaml\nUsing device: emulator-5554\nMaestro attempt: 1/1\nRunning on Pixel_10_Pro\n > Flow guard_resident_staging_e2e\nLaunch app \"com.facilitypro.mobile\" with clear state... COMPLETED\nRun _dismiss_developer_menu.yaml...\n  Run flow when \"This is the developer menu.\" is visible...\n  Run flow when \"This is the developer menu.\" is visible... SKIPPED\nRun _dismiss_developer_menu.yaml... COMPLETED\nRun flow when \"Development Build\" is visible...\n  Tap on \"http://10.0.2.2:8081\"... COMPLETED\nRun flow when \"Development Build\" is visible... COMPLETED\nRun _dismiss_developer_menu.yaml...\n  Run flow when \"This is the developer menu.\" is visible...\n  Run flow when \"This is the developer menu.\" is visible... SKIPPED\nRun _dismiss_developer_menu.yaml... COMPLETED\nAssert that \"Mobile OTP Sign-In\" is visible... COMPLETED\nAssert that \"Mobile OTP Sign-In\" is visible... COMPLETED\nScrolling DOWN until id: qa_login_email_sign_in is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED\nTap on id: qa_login_email_sign_in... COMPLETED\nAssert that \"Email Sign-In\" is visible... COMPLETED\nTap on id: qa_email_login_email... COMPLETED\nErase text... COMPLETED\nInput text guard@test.com... COMPLETED\nHide Keyboard... COMPLETED\nTap on id: qa_email_login_password... COMPLETED\nErase text... COMPLETED\nInput text Test@1234... COMPLETED\nHide Keyboard... COMPLETED\nScrolling DOWN until id: qa_email_login_submit is visible with speed 40, visibility percentage 100%, timeout 15000 ms, with centering disabled... COMPLETED\nTap on id: qa_email_login_submit... COMPLETED\nRun _dismiss_developer_menu.yaml...\n  Run flow when \"This is the developer menu.\" is visible...\n  Run flow when \"This is the developer menu.\" is visible... SKIPPED\nRun _dismiss_developer_menu.yaml... COMPLETED\nRun flow when id: qa_onboarding_biometric_skip is visible...\nRun flow when id: qa_onboarding_biometric_skip is visible... SKIPPED\nRun flow when id: qa_onboarding_biometric_continue is visible...\nRun flow when id: qa_onboarding_biometric_continue is visible... SKIPPED\nRun flow when id: qa_onboarding_geo_refresh is visible...\n  Tap on id: qa_onboarding_geo_refresh... COMPLETED\n  Assert that id: qa_onboarding_geo_complete is visible... COMPLETED\n  Tap on id: qa_onboarding_geo_complete... COMPLETED\nRun flow when id: qa_onboarding_geo_refresh is visible... COMPLETED\nAssert that id: qa_guard_tab_home is visible... COMPLETED\nAssert that id: qa_guard_tab_home is visible... COMPLETED\nTap on id: qa_guard_tab_visitors... COMPLETED\nRun _dismiss_developer_menu.yaml...\n  Run flow when \"This is the developer menu.\" is visible...\n  Run flow when \"This is the developer menu.\" is visible... SKIPPED\nRun _dismiss_developer_menu.yaml... COMPLETED\nAssert that \"Visitor Logging\" is visible... COMPLETED\nTap on id: qa_guard_visitor_name... COMPLETED\nInput text Staging Approve Visitor 01... COMPLETED\nHide Keyboard... COMPLETED\nTap on id: qa_guard_visitor_phone... COMPLETED\nInput text 9876543210... COMPLETED\nHide Keyboard... COMPLETED\nTap on id: qa_guard_visitor_purpose... COMPLETED\nInput text Guest visit... COMPLETED\nHide Keyboard... COMPLETED\nTap on id: qa_guard_visitor_destination... COMPLETED\nInput text Rohit Verna... COMPLETED\nHide Keyboard... COMPLETED\nAssert that id: qa_guard_destination_result_0 is visible... COMPLETED\nAssert that id: qa_guard_destination_title_0 is visible... COMPLETED\nTap on id: qa_guard_destination_result_0... COMPLETED\nScrolling DOWN until id: qa_guard_save_visitor is visible with speed 40, visibility percentage 100%, timeout 15000 ms, with centering disabled... COMPLETED\nTap on id: qa_guard_save_visitor... COMPLETED\nAssert that id: qa_guard_visitors_message is visible... COMPLETED\nAssert that id: qa_guard_visitors_message is visible... COMPLETED\nTap on id: qa_guard_tab_home... COMPLETED\nScrolling DOWN until id: qa_guard_sign_out is visible with speed 40, visibility percentage 100%, timeout 15000 ms, with centering disabled... COMPLETED\nTap on id: qa_guard_sign_out... COMPLETED\nAssert that \"Mobile OTP Sign-In\" is visible... COMPLETED\nScrolling DOWN until id: qa_login_email_sign_in is visible with speed 40, visibility percentage 100%, timeout 20000 ms, with centering disabled... COMPLETED\nTap on id: qa_login_email_sign_in... COMPLETED\nAssert that \"Email Sign-In\" is visible... COMPLETED\nTap on id: qa_email_login_email... COMPLETED\nErase text... COMPLETED\nInput text rohit@test.com... COMPLETED\nHide Keyboard... COMPLETED\nTap on id: qa_email_login_password... COMPLETED\nErase text... COMPLETED\nInput text Test@1234... COMPLETED\nHide Keyboard... COMPLETED\nScrolling DOWN until id: qa_email_login_submit is visible with speed 40, visibility percentage 100%, timeout 15000 ms, with centering disabled... COMPLETED\nTap on id: qa_email_login_submit... COMPLETED\nRun _dismiss_developer_menu.yaml...\n  Run flow when \"This is the developer menu.\" is visible...\n  Run flow when \"This is the developer menu.\" is visible... SKIPPED\nRun _dismiss_developer_menu.yaml... COMPLETED\nRun flow when id: qa_onboarding_biometric_skip is visible...\nRun flow when id: qa_onboarding_biometric_skip is visible... SKIPPED\nRun flow when id: qa_onboarding_biometric_continue is visible...\nRun flow when id: qa_onboarding_biometric_continue is visible... SKIPPED\nRun flow when id: qa_onboarding_geo_refresh is visible...\nRun flow when id: qa_onboarding_geo_refresh is visible... SKIPPED\nAssert that id: qa_resident_tab_home is visible... COMPLETED\nAssert that id: qa_resident_tab_home is visible... COMPLETED\nTap on id: qa_resident_tab_approvals... COMPLETED\nRun _dismiss_developer_menu.yaml...\n  Run flow when \"This is the developer menu.\" is visible...\n  Run flow when \"This is the developer menu.\" is visible... SKIPPED\nRun _dismiss_developer_menu.yaml... COMPLETED\nAssert that \"Resident visitor decisions\" is visible... COMPLETED\nAssert that id: qa_resident_approval_card_0 is visible... COMPLETED\nAssert that \"Staging Approve Visitor 01\" is visible... COMPLETED\nTap on id: qa_resident_approve_visitor_0... COMPLETED\nAssert that id: qa_resident_approvals_message is visible... COMPLETED\nAssert that id: qa_resident_approvals_message is visible... COMPLETED\nEmulator log: /var/folders/bh/h21pff4d2qdfxwnkhk9kxzv80000gn/T//qa-maestro-smoke-emulator.log\nMetro log: /var/folders/bh/h21pff4d2qdfxwnkhk9kxzv80000gn/T//qa-maestro-smoke-metro.log\nVerifying approved visitor in Supabase\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502        visitor_name        \u2502               flat_id                \u2502 approval_status \u2502 approved_by_resident \u2502          decision_at          \u2502          entry_time           \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Staging Approve Visitor 01 \u2502 1ae71b6b-fc10-4fcf-8005-c7f0c90f16f8 \u2502 approved        \u2502 true                 \u2502 2026-04-16 18:15:26.514862+00 \u2502 2026-04-16 18:14:19.427744+00 \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n--- STDERR ---\nInitialising login role...\nA new version of Supabase CLI is available: v2.90.0 (currently installed v2.84.2)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\nInitialising login role...\nA new version of Supabase CLI is available: v2.90.0 (currently installed v2.84.2)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\nVisitor row was created but did not reach approved state.",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-e2e-approve-attempt-3.log"
+  },
+  {
+    "name": "verify-notification-insertion",
+    "status": "skipped",
+    "attempts": 0,
+    "error": "Dependency 'staging-e2e-approve' not met",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/verify-notification-insertion-attempt-0.log"
+  },
+  {
+    "name": "verify-notification-dispatch",
+    "status": "fail",
+    "attempts": 2,
+    "error": "$ supabase db query 'SELECT trigger_mobile_notification_queue();' --linked\ncwd: /Volumes/Soham/untitled folder/facility-platform/Solvesxx_web\ntimeout_seconds: 30\nexit_code: 0\n\n--- STDOUT ---\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 trigger_mobile_notification_queue \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502                                   \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n--- STDERR ---\nInitialising login role...\n\n--- FINAL POLL RESULT ---\n\n$ supabase db query 'SELECT id, delivery_state, created_at\n               FROM notifications\n               WHERE notification_type = '\\''visitor_at_gate'\\''\n                 AND created_at >= '\\''2026-04-16T23:38:04.478823+05:30'\\''::timestamptz\n               ORDER BY created_at DESC\n               LIMIT 1;' --linked\ncwd: /Volumes/Soham/untitled folder/facility-platform/Solvesxx_web\ntimeout_seconds: 30\nexit_code: 0\n\n--- STDOUT ---\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                  id                  \u2502 delivery_state \u2502          created_at           \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 6a0a5070-058c-4d33-9c01-02fc4732a1a1 \u2502 push_queued    \u2502 2026-04-16 18:14:19.427744+00 \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n--- STDERR ---\nInitialising login role...",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/verify-notification-dispatch-attempt-2.log"
+  },
+  {
+    "name": "staging-e2e-deny",
+    "status": "fail",
+    "attempts": 3,
+    "error": "Neither script nor Maestro flow exists for guard_resident_staging_deny_e2e. Expected one of: /Volumes/Soham/untitled folder/facility-platform/qa_agent/run_guard_resident_staging_deny_e2e.sh or /Volumes/Soham/untitled folder/facility-platform/qa_agent/maestro/guard_resident_staging_deny_e2e.yaml",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-e2e-deny-attempt-3.log"
+  },
+  {
+    "name": "staging-e2e-checklist",
+    "status": "fixed",
+    "attempts": 2,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-e2e-checklist-attempt-2.log"
+  },
+  {
+    "name": "staging-e2e-sos",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-e2e-sos-attempt-1.log"
+  },
+  {
+    "name": "verify-panic-notification",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/verify-panic-notification-attempt-1.log"
+  },
+  {
+    "name": "web-admin-backend-verification",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/web-admin-backend-verification-attempt-1.log"
+  },
+  {
+    "name": "staging-fallback-audit",
+    "status": "pass",
+    "attempts": 1,
+    "error": "",
+    "fix_branch": "",
+    "fix_commit": "",
+    "log_path": "checkpoint-logs/staging-fallback-audit-attempt-1.log"
+  }
+]

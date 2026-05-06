@@ -1,9 +1,9 @@
-[submodule "enterprise-canvas-main"]
-	path = enterprise-canvas-main
+[submodule "Solvesxx_web"]
+	path = Solvesxx_web
 	url = https://github.com/Soham407/Solvesxx_web.git
 	branch = root-wip-backup-20260406
-[submodule "facilitypro-mobile"]
-	path = facilitypro-mobile
+[submodule "Solvesxx_mobile"]
+	path = Solvesxx_mobile
 	url = https://github.com/Soham407/Solvesxx_mobile.git
 	branch = transfer/workspace-20260407
 [submodule "Solvexx-landingPage-"]

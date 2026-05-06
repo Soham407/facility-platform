@@ -1,3 +1,6 @@
+> SUPERSEDED by `STATUS.md` (2026-05-06).
+> Kept for history.
+
 # FacilityPro — Mobile App Audit Report (Harsh Review)
 
 **Date:** April 4, 2026

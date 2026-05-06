@@ -1,3 +1,6 @@
+> SUPERSEDED by `STATUS.md` (2026-05-06).
+> Kept for history.
+
 # Corrected Facility Platform Audit
 
 Date: April 21, 2026
@@ -103,4 +106,3 @@ V
    verify whether backend RPCs for SMS/push are actually deployed and working
 4. Supplier/buyer:
    validate full request -> order -> dispatch -> bill -> proof path with real records
-

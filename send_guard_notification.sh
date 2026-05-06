@@ -11,11 +11,11 @@ RESPONSE=$(curl -s -X POST https://wwhbdgwfodumognpkgrf.supabase.co/auth/v1/sign
   -H "Content-Type: application/json" \
   -d '{"email":"testuser'$(date +%s)'@test.com","password":"Pass123!"}')
 
-TOKEN=$(echo "$RESPONSE" | jq -r '.session.access_token' 2>/dev/null)
+TOKEN=$(echo "$RESPONSE" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('access_token',''))" 2>/dev/null)
 
 if [ -z "$TOKEN" ] || [ "$TOKEN" = "null" ]; then
   echo "❌ Failed to get token. Response:"
-  echo "$RESPONSE" | jq '.'
+  echo "$RESPONSE" | python3 -m json.tool
   exit 1
 fi
 
@@ -31,7 +31,7 @@ NOTIF_RESPONSE=$(curl -s -X POST https://wwhbdgwfodumognpkgrf.supabase.co/functi
   -d '{"user_id":"34ed8531-728c-4ef1-b7cc-2144ff45ebd2","title":"Guard Test Notification","body":"Testing push notifications system","channel":"fcm"}')
 
 echo "📬 Response:"
-echo "$NOTIF_RESPONSE" | jq '.'
+echo "$NOTIF_RESPONSE" | python3 -m json.tool
 
 echo ""
 echo "✅ Check:"

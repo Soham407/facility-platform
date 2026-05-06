@@ -1,8 +1,11 @@
+> SUPERSEDED by `STATUS.md` (2026-05-06).
+> Kept for history.
+
 # Website Audit Report - Continuation Notes (Harsh Review Update)
 
-**Date:** 2026-04-04
+**Date:** 2026-05-03
 **Reviewer:** Codex
-**Target Repo:** `enterprise-canvas-main`
+**Target Repo:** `Solvesxx_web`
 **Purpose:** Replace the earlier optimistic audit with evidence from actual repo inspection, commands, and browser verification so the next session can continue without repeating the full crawl.
 
 ---
@@ -16,6 +19,28 @@ The previous audit was too generous. It inferred completeness from hook names, m
 - The repo is **not in a trustworthy review state** right now.
 - Several workflows are still partly simulated, manual-only, or blocked by runtime issues.
 - The current working tree is missing a large amount of tracked test and support infrastructure, so claims of enterprise readiness are not defensible yet.
+
+## Current Verification Snapshot
+
+This is the live cleanup view for the web app. It is intentionally stricter than `PHASES.md`, because the goal here is to identify what still needs architectural work.
+
+| Area | Status | Why |
+|------|--------|-----|
+| Master Data | done | Core admin and catalog masters are documented as complete in the phase ledger and are not currently a cleanup priority. |
+| Supplier Workflow | done | Supplier portal, bills, indents, and POs are treated as live workflows in the phase ledger. |
+| Visitor Management | done | Visitor, resident directory, and notification paths are fully represented in the phase ledger. |
+| Ticket Generation | done | Behavior, quality, and RTV ticket flows are present and live. |
+| Reports | done | Reports hub and subreports are modeled as live pages. |
+| Services: AC / Pest / Printing | done | These service pages are present as full modules in the phase ledger. |
+| Security Guard Monitoring | partial | Live audit shows simulated map/dispatch behavior and hardcoded fallback paths that still need cleanup. |
+| Human Resource Management | partial | Attendance, payroll, and document flows exist, but the live audit exposed runtime issues around document handling and dashboard usage. |
+| Inventory / Procurement | partial | Core purchasing exists, but reorder alert follow-through and breadcrumb route generation still need hardening. |
+| Buyer / Material Supply | partial | Buyer requests are live, but billing/payment and workflow completion still have manual or environment-limited edges. |
+| Finance / Audit | partial | Supplier-side finance is strong, but buyer-facing payment and closure paths still deserve verification. |
+| Company Admin / Dashboard Ops | partial | Admin dashboard queries and document type coverage still need cleanup. |
+| Field Execution | partial | Service boy and technician flows exist, but dashboard actions and evidence capture should be re-verified. |
+
+See `WEB_PRD_COVERAGE_MATRIX.md` for the PRD-by-PRD breakdown.
 
 ---
 

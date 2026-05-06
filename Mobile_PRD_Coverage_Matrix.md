@@ -1,3 +1,6 @@
+> SUPERSEDED by `STATUS.md` (2026-05-06).
+> Kept for history.
+
 # Mobile PRD Coverage Matrix
 
 This matrix maps the current full-role Maestro suite to [Mobile_PRD_v2.md](./Mobile_PRD_v2.md).

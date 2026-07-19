@@ -1,6 +1,6 @@
 # FacilityPlatform Context
 
-Last updated: 2026-05-06
+Last updated: 2026-05-17
 
 This workspace coordinates the Solvesxx facility management product across:
 
@@ -77,6 +77,7 @@ These are application roles found in web auth, mobile navigation, schema, and se
 The authenticated web app lives under `Solvesxx_web/app/(dashboard)`:
 
 - `/dashboard` - role dashboards and operational overview.
+- `/admin` - platform/admin operations for societies, guards, residents, indents, waitlist, and audit logs.
 - `/company` - roles, designations, employees, users, and admin/company setup.
 - `/hrms` - attendance, payroll, leave, recruitment, shifts, documents, holidays, and events.
 - `/inventory` - products, categories, suppliers, POs, GRN, warehouses, rates, stock, and alerts.
@@ -89,24 +90,31 @@ The authenticated web app lives under `Solvesxx_web/app/(dashboard)`:
 - `/service-boy` and `/delivery` - field execution surfaces.
 - `/buyer` - buyer portal.
 - `/supplier` - supplier/vendor portal.
+- `/settings` - company, admins, permissions, branding, notifications, and audit settings.
 - `/tickets` - behavior, incident, quality, and RTV ticket surfaces.
 - `/reports` - analytics/reporting hub.
 - `/assets` and `/scan/[id]` - assets, QR codes, QR scans, and asset scan landing.
+- `/test-guard`, `/test-resident`, `/test-delivery` - explicit test/demo surfaces that should not be treated as production routes.
 
 ## Main Mobile Surfaces
 
-The mobile app routes by role:
+The mobile app routes by role through dedicated navigators:
 
 - Guard tabs: home, checklist, visitors, contacts.
 - Resident tabs: home, approvals, visitors, community, notifications.
-- Oversight tabs: home, alerts, operations, tickets, announcements.
+- Oversight tabs: home, alerts, operations, tickets; `Post Notice` appears only for `society_manager`.
 - HRMS tabs: home, attendance, leave, payslips, documents.
-- Service tabs: home, tasks, materials, proof.
+- Service tabs: home, tasks, materials, proof; shared by `ac_technician`, `pest_control_technician`, `delivery_boy`, and `service_boy`.
 - Buyer tabs: home, requests, invoices, feedback.
-- Supplier tabs: home, indents, orders, billing.
-- Auth/onboarding: phone OTP, email login, biometric setup, profile photo, geofence calibration.
+- Supplier tabs: home, indents, orders, billing; shared by `supplier` and `vendor`.
+- Auth/onboarding: phone OTP, optional staging email login, biometric setup, profile photo, geofence calibration.
 
-Mobile currently contains dev preview profiles and preview-safe flows. Production readiness requires validating real OTP, device camera, location, push delivery, session persistence, and release builds without preview shortcuts.
+## Current Mobile Role Routing Reality
+
+- Dedicated mobile navigators exist for `security_guard`, `resident`, `security_supervisor`, `society_manager`, `employee`, `buyer`, `supplier`, `vendor`, `ac_technician`, `pest_control_technician`, `delivery_boy`, and `service_boy`.
+- `admin`, `company_md`, `company_hod`, `account`, `storekeeper`, `site_supervisor`, and `super_admin` currently fall back to `RoleLandingScreen` rather than a dedicated mobile workspace.
+- The auth layer still includes dev preview identities, a demo OTP backend path, and an optional staging email-login path. Those paths are useful for QA but should not be treated as production-ready auth.
+- Several mobile flows support local preview data or preview-only storage behavior; production confidence still depends on real backend and device validation.
 
 ## Important State Machines
 
@@ -140,8 +148,8 @@ Private media should be read through signed URLs or RLS-protected metadata, not 
 
 ## Current Truth About Scope
 
-- The web app has broad module coverage, but many high-risk workflows are still marked partial because audits found simulated paths, query mismatches, or unproven end-to-end transitions.
-- The mobile app has stronger implementation coverage for role-local flows, especially guard/resident, but production confidence still depends on real backend/device/push validation.
+- The web app has broad module coverage, but several high-risk workflows still carry validation gaps because audits found simulated paths, query mismatches, or unproven end-to-end transitions.
+- The web app also contains explicit test/demo routes, so route count alone should not be confused with production surface area.
+- The mobile app has stronger implementation coverage for role-local flows, especially guard/resident, but production confidence still depends on real backend/device/push validation and removal or gating of preview-only shortcuts.
 - Guard + Resident is the narrowest realistic v1 mobile promise.
 - Web v1 should focus on making existing admin, society/security, buyer, supplier, inventory, finance, and field-execution paths trustworthy instead of adding new modules.
-

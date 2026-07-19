@@ -3,10 +3,19 @@
 This root folder is a coordination layer for three separate apps plus shared assets.
 It should stay small, readable, and mostly free of feature work.
 
+## Document Classes
+
+- Current-state docs: `README.md`, `CONTEXT.md`, `STATUS.md`, `ROADMAP.md`, `WORKSPACE_MAP.md`
+- Planning/spec docs: `PRD.md`, `Mobile_PRD.md`, PRD coverage matrices
+- Historical evidence: audits, release checklists, staging runbooks, `AUDIT_REPORTS/`, `qa_agent/artifacts/`
+
+If two documents disagree, prefer the current-state docs for "what exists now" and treat PRDs/audits as intent or history.
+
 ## What Lives Here
 
 - `PRD.md` - the client scope for the overall platform
 - `README.md` - workspace entrypoint and submodule notes
+- `docs/INDEX.md` - cross-workspace documentation map
 - `Solvesxx_web/` - the main web application; highest priority for cleanup
 - `Solvesxx_mobile/` - the mobile companion app; second priority
 - `Solvexx-landingPage-/` - marketing / landing site; third priority
@@ -40,7 +49,7 @@ That mismatch is a navigation problem, not just a naming problem. It makes it ha
 ## Recommended Root-Level Docs
 
 - `CONTEXT.md` - current product language and architecture from actual code/schema.
-- `STATUS.md` - source-of-truth v1 implementation status.
+- `STATUS.md` - source-of-truth implementation status with explicit validation gaps.
 - `ROADMAP.md` - v1 / v2 / not-doing scope.
 - `docs/adr/` - decisions future agents should not re-litigate.
 - `WEBSITE_AUDIT.md` - current web audit and findings
@@ -48,7 +57,7 @@ That mismatch is a navigation problem, not just a naming problem. It makes it ha
 - `WORKSPACE_MAP.md` - this file
 - `WEB_CLEANUP_BACKLOG.md` - prioritized cleanup order for `Solvesxx_web`
 
-For new work, treat the audit files as evidence and `STATUS.md` / `ROADMAP.md` as the planning entrypoint.
+For new work, treat audit files as evidence, PRDs as intent, and `STATUS.md` / `ROADMAP.md` as the planning entrypoint.
 
 ## First Cleanup Tasks
 

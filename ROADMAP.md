@@ -1,6 +1,6 @@
 # FacilityPlatform Roadmap
 
-Last updated: 2026-05-06
+Last updated: 2026-05-17
 
 This roadmap is intentionally narrower than the PRDs. The product already has broad implementation surface area; v1 means the smallest set of workflows that must be trustworthy end-to-end.
 
@@ -9,11 +9,13 @@ This roadmap is intentionally narrower than the PRDs. The product already has br
 v1 is client-usable when the following are true:
 
 - Guard + Resident mobile workflows pass against staging with real backend data and real devices.
+- Preview identities, demo OTP shortcuts, and staging-only auth paths are gated out of release builds.
 - Web admin can manage the required master data, guards, residents, suppliers, products, service setup, and billing support data without broken dashboard/query paths.
 - Visitor management, guard duty, SOS, checklist, resident approval/denial, and notifications work without preview shortcuts.
 - Buyer request -> indent/PO -> supplier dispatch -> receipt/GRN -> bill/payment/feedback can be demonstrated with persisted records.
 - Field/service execution success actions persist evidence and advance real workflow state.
 - Critical flows have repeatable evidence: Playwright/Maestro where possible, plus real-device staging runbooks where automation cannot prove device capabilities.
+- Docs distinguish clearly between current-state truth and broader PRD intent.
 
 ## v1 Must Work End-To-End
 
@@ -37,6 +39,7 @@ v1 is client-usable when the following are true:
 
 These can stay visible or partially built, but they should not block v1 unless the client explicitly adds them to the v1 promise:
 
+- Dedicated mobile workspaces for admin-like roles that currently fall back to `RoleLandingScreen`.
 - Full HRMS payroll automation and manager-side HR approval depth.
 - Full AC service lifecycle beyond task/material/proof basics.
 - Full pest-control chemical/PPE/resident notification lifecycle.
@@ -55,6 +58,7 @@ These can stay visible or partially built, but they should not block v1 unless t
 - No landing-page polish as a substitute for product readiness.
 - No broad UI redesign unless it fixes a workflow-blocking usability issue.
 - No promise that every role in mobile is production-supported.
+- No claim that preview-backed mobile behavior equals release validation.
 - No merge of web/mobile repos until the current source-of-truth docs and v1 status are stable.
 
 ## Work Gate

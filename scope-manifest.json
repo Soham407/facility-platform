@@ -1,0 +1,280 @@
+{
+  "workflows": [
+    {
+      "id": "roles",
+      "db_tables": [
+        "roles"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "designations",
+      "db_tables": [
+        "designations"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "employees",
+      "db_tables": [
+        "employees",
+        "employee_documents",
+        "employee_shift_assignments",
+        "employee_salary_structure",
+        "employee_behavior_tickets"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "users",
+      "db_tables": [
+        "users"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "inventory",
+      "db_tables": [
+        "inventory",
+        "product_categories",
+        "products",
+        "warehouses",
+        "suppliers",
+        "supplier_products",
+        "stock_batches",
+        "stock_levels",
+        "stock_transactions"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "tickets",
+      "db_tables": [
+        "material_receipts",
+        "rtv_tickets",
+        "shortage_notes",
+        "oversight_tickets"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "procurement",
+      "db_tables": [
+        "requests",
+        "request_items",
+        "indents",
+        "indent_items",
+        "purchase_orders",
+        "purchase_order_items",
+        "purchase_bills",
+        "sale_bills",
+        "payments",
+        "reconciliations"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "hrms",
+      "db_tables": [
+        "leave_applications",
+        "leave_types",
+        "attendance_logs",
+        "holidays",
+        "shifts",
+        "payroll_cycles",
+        "payslips",
+        "salary_components"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "security",
+      "db_tables": [
+        "security_guards",
+        "guard_panic_alerts",
+        "guard_patrol_logs",
+        "panic_alerts",
+        "gps_tracking",
+        "visitors",
+        "daily_checklists",
+        "checklist_responses"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "services",
+      "db_tables": [
+        "services",
+        "service_requests",
+        "service_tasks",
+        "service_rates",
+        "technician_profiles",
+        "work_master"
+      ],
+      "verdict": "required"
+    },
+    {
+      "id": "company",
+      "db_tables": [
+        "company_locations",
+        "buildings",
+        "societies",
+        "flats",
+        "residents"
+      ],
+      "verdict": "required"
+    }
+  ],
+  "roles": [
+    {
+      "role": "admin",
+      "in_client_scope": true
+    },
+    {
+      "role": "company_md",
+      "in_client_scope": true
+    },
+    {
+      "role": "company_hod",
+      "in_client_scope": true
+    },
+    {
+      "role": "account",
+      "in_client_scope": true
+    },
+    {
+      "role": "delivery_boy",
+      "in_client_scope": true
+    },
+    {
+      "role": "buyer",
+      "in_client_scope": true
+    },
+    {
+      "role": "supplier",
+      "in_client_scope": true
+    },
+    {
+      "role": "security_guard",
+      "in_client_scope": true
+    },
+    {
+      "role": "security_supervisor",
+      "in_client_scope": true
+    },
+    {
+      "role": "society_manager",
+      "in_client_scope": true
+    },
+    {
+      "role": "service_boy",
+      "in_client_scope": true
+    },
+    {
+      "role": "super_admin",
+      "in_client_scope": false
+    },
+    {
+      "role": "resident",
+      "in_client_scope": false
+    },
+    {
+      "role": "employee",
+      "in_client_scope": false
+    },
+    {
+      "role": "ac_technician",
+      "in_client_scope": false
+    },
+    {
+      "role": "pest_control_technician",
+      "in_client_scope": false
+    },
+    {
+      "role": "storekeeper",
+      "in_client_scope": false
+    },
+    {
+      "role": "site_supervisor",
+      "in_client_scope": false
+    }
+  ],
+  "masters": [
+    {
+      "id": "role_master",
+      "verdict": "required"
+    },
+    {
+      "id": "designation_master",
+      "verdict": "required"
+    },
+    {
+      "id": "employee_master",
+      "verdict": "required"
+    },
+    {
+      "id": "user_master",
+      "verdict": "required"
+    },
+    {
+      "id": "product_category",
+      "verdict": "required"
+    },
+    {
+      "id": "product_subcategory",
+      "verdict": "required"
+    },
+    {
+      "id": "product_master",
+      "verdict": "required"
+    },
+    {
+      "id": "supplier_details",
+      "verdict": "required"
+    },
+    {
+      "id": "suppliers_wise_product",
+      "verdict": "required"
+    },
+    {
+      "id": "suppliers_wise_product_rate",
+      "verdict": "required"
+    },
+    {
+      "id": "sale_product_rate",
+      "verdict": "required"
+    },
+    {
+      "id": "daily_checklist_master",
+      "verdict": "required"
+    },
+    {
+      "id": "complaint_request_nature_master",
+      "verdict": "required"
+    },
+    {
+      "id": "department_locations_master",
+      "verdict": "required"
+    },
+    {
+      "id": "service_categories_master",
+      "verdict": "required"
+    },
+    {
+      "id": "buyer_details",
+      "verdict": "required"
+    },
+    {
+      "id": "unit_branch_details",
+      "verdict": "required"
+    },
+    {
+      "id": "site_details",
+      "verdict": "required"
+    },
+    {
+      "id": "asset_master",
+      "verdict": "required"
+    }
+  ]
+}

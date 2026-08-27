@@ -1,0 +1,1399 @@
+{
+  "Solvesxx_web/app/scan/[id]/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/waitlist/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/residents/unlinked/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/auth/client-ip/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/societies/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/societies/[id]/buildings/[buildingId]/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/societies/[id]/buildings/[buildingId]/flats/[flatId]/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/societies/[id]/buildings/[buildingId]/flats/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/societies/[id]/buildings/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/societies/[id]/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/societies/import/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/residents/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/residents/[id]/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/create-user/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/users/[id]/role/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/users/[id]/suspend/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/users/[id]/activate/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/guards/[id]/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/guard-onboarding/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/employees/[id]/reset-security/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/admin/employees/[id]/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/society/visitors/[visitorId]/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/society/visitors/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/society/residents/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/super-admin/admins/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/super-admin/admins/[id]/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/super-admin/admins/[id]/reset-password/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/supplier/service-indent-response/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/supplier/returns/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/mobile/demo-otp/verify/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/mobile/demo-otp/send/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/users/reset-password/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/users/create/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/users/change-password/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/finance/payments/webhook/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/assets/qr-batch/[batchId]/download/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/assets/generate-qr-batch/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/api/service-orders/acknowledge-deployment/route.ts": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/settings/audit-logs/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/settings/branding/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/settings/admins/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/settings/permissions/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/settings/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/settings/notifications/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/settings/company/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/tickets/behavior/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/tickets/quality/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/tickets/returns/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/tickets/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/resident/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/test-resident/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/waitlist/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/audit-logs/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/societies/[id]/buildings/[buildingId]/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/societies/[id]/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/societies/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/residents/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/config/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/service-indents/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/material-indents/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/admin/guards/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/society/visitors/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/society/residents/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/society/panic-alerts/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/society/checklists/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/society/emergency/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/society/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/society/my-flat/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/attendance/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/specialized-profiles/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/holidays/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/recruitment/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/documents/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/profiles/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/payroll/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/events/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/shifts/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/leave/config/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/leave/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/hrms/incidents/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/dashboard/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/service-requests/board/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/service-requests/new/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/service-requests/[id]/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/service-requests/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/supplier/purchase-orders/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/supplier/bills/new/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/supplier/bills/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/supplier/profile/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/supplier/returns/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/supplier/indents/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/supplier/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/supplier/service-orders/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/test-guard/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/subcategories/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/service-purchase-orders/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/warehouses/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/products/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/purchase-orders/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/suppliers/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/supplier-products/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/requests/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/sales-rates/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/supplier-rates/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/grn/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/indents/verification/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/indents/create/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/inventory/categories/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/test-delivery/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/delivery/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/closure/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/reconciliation/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/payments/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/ledger/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/supplier-bills/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/buyer-invoices/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/sale-bills/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/compliance/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/performance-audit/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/budgeting/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/buyer-billing/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/finance/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/guard/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/assets/qr-codes/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/assets/maintenance/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/assets/[id]/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/assets/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/assets/categories/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/service-boy/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/plantation/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/pest-control/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/ac/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/security/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/printing/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/masters/tasks/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/masters/vendor-services/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/masters/work-master/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/masters/checklists/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/masters/service-tasks/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/masters/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/services/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/buyer/invoices/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/buyer/requests/new/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/buyer/requests/[id]/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/buyer/requests/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/buyer/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/reports/attendance/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/reports/financial/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/reports/inventory/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/reports/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/reports/services/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/company/designations/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/company/roles/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/company/locations/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/company/users/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/company/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/company/employees/[id]/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/company/employees/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/(dashboard)/company/employees/create/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/change-password/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_web/app/login/page.tsx": {
+    "type": "web_route",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/site_supervisor/SiteSupervisorGuardsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/site_supervisor/SiteSupervisorActionsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/site_supervisor/SiteSupervisorHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/app/RoleLandingScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/oversight/OversightTicketsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/oversight/OversightAlertsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/oversight/OversightOperationsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/oversight/OversightHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/company_md/MDHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/company_md/MDApprovalsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/company_hod/HODApprovalsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/company_hod/HODHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/company_hod/HODTeamScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/auth/BiometricLockScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/auth/EmailLoginScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/auth/OtpScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/auth/LoginScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/resident/ResidentApprovalsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/resident/ResidentCommunityScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/resident/ResidentNotificationsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/resident/ResidentVisitorsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/resident/ResidentHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/storekeeper/StorekeeperAlertsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/storekeeper/StorekeeperGRNScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/storekeeper/StorekeeperHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/admin/AdminHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/hrms/HrmsLeaveScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/hrms/HrmsDocumentsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/hrms/HrmsPayslipsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/hrms/HrmsAttendanceScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/hrms/HrmsHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/supplier/SupplierOrdersScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/supplier/SupplierHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/supplier/SupplierBillingScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/supplier/SupplierIndentsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/super_admin/SuperAdminCompaniesScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/super_admin/SuperAdminHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/account/AccountHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/service/ServiceTasksScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/service/ServiceMaterialsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/service/ServiceProofScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/service/ServiceHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/guard/GuardVisitorsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/guard/GuardChecklistScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/guard/GuardContactsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/guard/GuardHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/societyManager/PostAnnouncementScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/buyer/BuyerFeedbackScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/buyer/BuyerInvoicesScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/buyer/BuyerHomeScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/buyer/BuyerRequestsScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/onboarding/GeoFenceCalibrationScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/onboarding/ProfilePhotoScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_mobile/src/screens/onboarding/BiometricSetupScreen.tsx": {
+    "type": "mobile_screen",
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSocieties.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useProducts.ts": {
+    "type": "hook",
+    "references": 8,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useGRN.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePlatformRolePermissions.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useShifts.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSupervisorStats.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useWorkMaster.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useReconciliation.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSystemConfig.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useBackgroundVerifications.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/use-mobile.tsx": {
+    "type": "hook",
+    "references": 0,
+    "status": "dead"
+  },
+  "Solvesxx_web/hooks/useSecurityGuards.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useReorderAlerts.ts": {
+    "type": "hook",
+    "references": 6,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useFinancialClosure.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useResident.ts": {
+    "type": "hook",
+    "references": 12,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePurchaseOrders.ts": {
+    "type": "hook",
+    "references": 6,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSupplierBills.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useBuyerRequests.ts": {
+    "type": "hook",
+    "references": 10,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSaleProductRates.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useCompliance.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useEmployeeProfile.ts": {
+    "type": "hook",
+    "references": 12,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useServicePurchaseOrders.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useResidents.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useAnalyticsData.ts": {
+    "type": "hook",
+    "references": 5,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useVisitors.ts": {
+    "type": "hook",
+    "references": 5,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useProductCategories.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePlantation.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useBuyerInvoices.ts": {
+    "type": "hook",
+    "references": 6,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useResidentProfile.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useShortageNotes.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePanicAlertSubscription.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useAssetCategories.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useDeliveryLogs.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useGuardVisitors.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useMaintenanceSchedules.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useAdBookings.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePatrolLogs.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useBudgets.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useAttendance.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useProductSubcategories.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useAuth.tsx": {
+    "type": "hook",
+    "references": 0,
+    "status": "dead"
+  },
+  "Solvesxx_web/hooks/useSupplierRates.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useGuardChecklist.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePestControlInventory.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useServiceDeploymentMasters.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useResidentLookup.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useDesignations.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useWaitlist.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePlatformAuditLogs.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePayroll.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSaleBills.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSpillKits.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useLeaveApplications.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useServices.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSocietyAudit.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useInactivityMonitor.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePlatformConfig.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useGuardLiveLocation.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useChemicals.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useWarehouses.ts": {
+    "type": "hook",
+    "references": 6,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useLeaveTypes.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useCompanyEvents.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSupplierProducts.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useChecklists.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useAssets.ts": {
+    "type": "hook",
+    "references": 5,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useQrCodes.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useRoles.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useUsers.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSupplierPortal.ts": {
+    "type": "hook",
+    "references": 9,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useEmergencyContacts.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useServiceRequests.ts": {
+    "type": "hook",
+    "references": 18,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useNotifications.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useMDStats.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useIndents.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useEmployeeSalaryStructure.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useRTVTickets.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePestControlPPE.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useServiceDeliveryNotes.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useAuditLogs.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useCompanyLocations.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useHolidays.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/lib/useSupabaseMutation.ts": {
+    "type": "hook",
+    "references": 12,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/lib/useSupabaseQuery.ts": {
+    "type": "hook",
+    "references": 13,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useBuyerFeedback.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePersonnelDispatches.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSocietyAdmin.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useInventory.ts": {
+    "type": "hook",
+    "references": 5,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useFinance.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useCandidates.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useFlats.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useBehaviorTickets.ts": {
+    "type": "hook",
+    "references": 4,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePlatformAdminAccounts.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePanicAlertHistory.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useHODStats.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useEmployeeDocuments.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useJobSessions.ts": {
+    "type": "hook",
+    "references": 6,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useBuildings.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useVendorWiseServices.ts": {
+    "type": "hook",
+    "references": 2,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePanicAlert.ts": {
+    "type": "hook",
+    "references": 9,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePerformanceAudit.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useTechnicians.ts": {
+    "type": "hook",
+    "references": 3,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSuppliers.ts": {
+    "type": "hook",
+    "references": 8,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useEmployees.ts": {
+    "type": "hook",
+    "references": 11,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/usePrintingMaster.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  },
+  "Solvesxx_web/hooks/useSocietyStats.ts": {
+    "type": "hook",
+    "references": 1,
+    "status": "works"
+  }
+}

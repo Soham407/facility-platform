@@ -1,0 +1,956 @@
+{
+  "asset_categories": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "assets": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "assets_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": false,
+    "category": "Ghost"
+  },
+  "attendance_logs": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "audit_logs": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "background_verifications": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "budgets": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "buildings": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "buyer_accounts": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "buyer_feedback": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "candidate_interviews": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "candidate_interviews_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "candidates": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "candidates_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "checklist_assignments": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "checklist_response_override_audit": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "checklist_responses": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "company_events": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "company_locations": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "compliance_snapshots": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "contracts": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "credit_notes": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "daily_checklist_items": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "daily_checklists": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "debit_notes": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "designations": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "due_maintenance_schedules": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": false,
+    "category": "Ghost"
+  },
+  "emergency_contacts": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "employee_behavior_tickets": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "employee_documents": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "employee_documents_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "employee_salary_structure": {
+    "in_scope": true,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "employee_salary_structure_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": false,
+    "category": "Ghost"
+  },
+  "employee_shift_assignments": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "employees": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "financial_periods": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "flats": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "gps_tracking": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "gps_tracking_2026_02": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_03": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_04": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_05": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_06": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_07": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_08": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_09": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_10": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_11": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "gps_tracking_2026_12": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "gps_tracking_default": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "guard_gps_tracking": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "guard_panic_alerts": {
+    "in_scope": true,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "guard_patrol_logs": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "holiday_master": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "holidays": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "horticulture_seasonal_plans": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "horticulture_tasks": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "horticulture_zones": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "indent_items": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "indents": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "indents_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "inventory": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "job_materials_used": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "job_photos": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "job_sessions": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "leave_applications": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "leave_types": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": false,
+    "category": "Living"
+  },
+  "login_rate_limits": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "maintenance_schedules": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "material_arrival_evidence": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "material_arrival_logs": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "material_receipt_items": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "material_receipts": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "material_receipts_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "notification_logs": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "notifications": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "oversight_tickets": {
+    "in_scope": true,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "panic_alerts": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "payment_methods": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "payments": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "payroll_cycles": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "payslips": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "payslips_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "personnel_dispatches": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "pest_control_chemicals": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "pest_control_ppe_verifications": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "pest_control_spill_kits": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "printing_ad_bookings": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "printing_ad_spaces": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "product_categories": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "product_subcategories": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "products": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "purchase_bill_items": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "purchase_bills": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "purchase_bills_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "purchase_order_items": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "purchase_orders": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "purchase_orders_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "push_tokens": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "qr_batch_logs": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "qr_codes": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "qr_codes_with_batch_info": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "qr_scans": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "reconciliation_lines": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "reconciliation_lines_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "reconciliations": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "reconciliations_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "reorder_rules": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "request_items": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "requests": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "resident_directory": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": false,
+    "category": "Ghost"
+  },
+  "residents": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "roles": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "rtv_tickets": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "salary_components": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "sale_bill_items": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "sale_bills": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "sale_product_rates": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "security_guards": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "service_acknowledgments": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "service_delivery_notes": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "service_feedback": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "service_purchase_order_items": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "service_purchase_orders": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "service_rates": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "service_requests": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "service_requests_with_details": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": false,
+    "category": "Ghost"
+  },
+  "service_tasks": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "services": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "services_wise_work": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "shifts": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "shortage_note_items": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "shortage_notes": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "societies": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "stock_batches": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "stock_levels": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": false,
+    "category": "Living"
+  },
+  "stock_transactions": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "storage_deletion_queue": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "supplier_products": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "supplier_rates": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "suppliers": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "system_config": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "technician_profiles": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "users": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "vendor_scorecards": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": false,
+    "category": "Ghost"
+  },
+  "vendor_wise_services": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "view_attendance_by_dept": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "view_financial_kpis": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "view_financial_monthly_trends": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "view_financial_revenue_by_category": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "view_inventory_summary": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "view_inventory_velocity": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "view_service_performance": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": false,
+    "category": "Zombie"
+  },
+  "visitor_bypass_audit": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "visitor_photo_metadata": {
+    "in_scope": false,
+    "is_referenced_in_code": false,
+    "has_rls": true,
+    "category": "Zombie"
+  },
+  "visitors": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "waitlist": {
+    "in_scope": false,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Ghost"
+  },
+  "warehouses": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  },
+  "work_master": {
+    "in_scope": true,
+    "is_referenced_in_code": true,
+    "has_rls": true,
+    "category": "Living"
+  }
+}
